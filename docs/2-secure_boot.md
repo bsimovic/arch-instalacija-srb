@@ -29,11 +29,11 @@ Svaki od njih potpisati sa:
 sbctl sign -s putanja_fajla
 ```
 
-## Automatsko potpisivanje bootloader-a
+## Automatsko potpisivanje `systemd-boot` bootloader-a
 Ukoliko se koristi `systemd-boot` bootloader, neophodno je potpisati i njega sledećom komandom:
 ```sh
 sbctl sign -s -o /usr/lib/systemd/boot/efi/systemd-bootx64.efi.signed /usr/lib/systemd/boot/efi/systemd-bootx64.efi
 ```
 
 ## Restart
-Možete restartovati sistem i uključiti ***secure boot*** u UEFI konfiguraciji.
+Možete restartovati računar i uključiti ***secure boot*** u UEFI konfiguraciji.

@@ -1,6 +1,6 @@
 # Instalacija
-## Boot sa USB uređaja
-Pre svega, boot-ovati instalacioni USB.
+## Boot sa eksternog uređaja
+Najpre, bootovati Arch Linux instalacioni mediji (USB drive, CD, itd.)
 ## Internet za vreme instalacije
 ### Wi-Fi (Preskočiti ako je računar povezan na internet preko kabla)
 #### Listanje dostupnih SSID-a i povezivanje
@@ -98,12 +98,12 @@ nano /mnt/etc/fstab
 Očitati generisan fajl u svrhu provere da li je sve u redu i izmeniti `fmask` i `dmask` za EFI particiju na `0077`.  
 ***EFI particija nije nužno prva na listi!***
 
-### Promena konteksta u instaliran sistem
+### chroot u instaliran sistem
 ```sh
 arch-chroot /mnt
 ```
 
-### Ukljucivanje mrežnog servisa i firewalla
+### Uključivanje mrežnog servisa i firewalla
 ```
 systemctl enable NetworkManager
 systemctl stop iptables
@@ -123,7 +123,6 @@ nano /etc/locale.gen
 #   sr_RS@latin UTF-8
 
 locale-gen
-
 nano /etc/locale.conf
 ```
 Uneti sledeće:
@@ -132,7 +131,7 @@ LANG=en_US.UTF-8
 LC_TIME=en_GB.UTF-8
 ```
 
-### Ukljucivanje `resume` hook-a za hibernaciju sistema
+### Uključivanje `resume` hook-a za hibernaciju sistema
 ```sh
 nano /etc/mkinitcpio.conf
 ```
@@ -140,7 +139,7 @@ Naći `HOOKS` property i dodati `resume` hook tako da linija izgleda ovako:
 ```
 HOOKS=(base udev autodetect microcode modconf kms keyboard keymap consolefont block filesystems resume fsck)
 ```
-Regenerisati initramfs
+Regenerisati initramfs:
 ```sh
 mkinitcpio -P
 ```
@@ -164,7 +163,8 @@ useradd -m -G wheel,storage,optical,audio,video tvoj_username
 passwd tvoj_username
 EDITOR=nano visudo
 ```
-Ukloniti `#` sa linije `%wheel ALL=(ALL) ALL`
+Ukloniti `#` sa linije `%wheel ALL=(ALL) ALL` i sačuvati fajl.
+
 ## Podešavanje `systemd-boot` bootloader-a
 ```sh
 bootctl install
@@ -182,7 +182,7 @@ Izvršiti `cat /etc/fstab`, prikazaće se spisak mountovanih particija na ekranu
 nano /boot/loader/entries/arch.conf
 ```
 Uneti sledeći sadržaj ***u zavisnosti od procesora*** i `x`-eve zameniti prethodno prikazanim UUID-jem EFI particije:   
-AMD:
+**AMD:**
 ```
 title   Arch Linux
 linux   /vmlinuz-linux
@@ -190,7 +190,7 @@ initrd  /amd-ucode.img
 initrd  /initramfs-linux.img
 options root=UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx rw
 ```
-Intel:
+**Intel:**
 ```
 title   Arch Linux
 linux   /vmlinuz-linux
@@ -198,7 +198,7 @@ initrd  /intel-ucode.img
 initrd  /initramfs-linux.img
 options root=UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx rw
 ```
-Sačuvati fajl i ukljuciti auto-update servis:
+Sačuvati fajl i uključiti auto-update servis:
 ```sh
 systemctl enable systemd-boot-update
 ```
@@ -209,3 +209,5 @@ exit
 umount -R /mnt
 reboot
 ```
+
+Bootovati sa diska na kome je instaliran sistem.
