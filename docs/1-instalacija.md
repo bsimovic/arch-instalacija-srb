@@ -41,7 +41,7 @@ Izmene se ne upisuju na disk pre nego što se izda `w` komanda.
 - **Proizvoljna veličina** - `linux` (ovo će biti root particija)
 - **Ostale particije po želji** - `linux` (/home, /var, itd...)
 
-ostale `linux` mogu biti na različitim diskovima
+ostale `linux` particije mogu biti na različitim diskovima
 
 #### Formatiranje
 ```sh
@@ -66,7 +66,7 @@ mount dev_file_home_particije /mnt/home
 ```sh
 pacman -Syu
 ```
-#### Neophodni paketi:
+#### Neophodni paketi
 - `base`, `linux`, `linux-firmware` - Sam operativni sistem 
 - `sudo` - Standardni alat za izdavanje komandi kao `root`
 - `networkmanager` - Drajver za mrežu
@@ -75,7 +75,7 @@ pacman -Syu
 - `nano` - CLI editor teksta
 - `man` - Linux manual
 
-#### Update za mikrokod, odabrati jedno u zavisnosti od CPU:
+#### Update za mikrokod, odabrati jedno u zavisnosti od CPU
 - Intel: `intel-ucode`
 - AMD: `amd-ucode`
 
