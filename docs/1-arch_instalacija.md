@@ -1,4 +1,4 @@
-# 1.1 Arch Linux instalacija
+# 1 Arch Linux instalacija
 ## Boot sa eksternog uređaja
 Najpre, bootovati Arch Linux instalacioni mediji (USB drive, CD, itd.)
 ## Internet za vreme instalacije
@@ -28,7 +28,8 @@ fdisk dev_file_diska
 #### Komande
 Izmene se ne upisuju na disk pre nego što se izda `w` komanda.
 - `p` - Listanje particija
-- `g` - Nova GPT tabela (reset tabele particija - **briše sve podatke na disku**)
+- `g` - Nova GPT tabela (reset tabele particija)
+> ⚠️ **Kreiranje nove GPT tabele briše sve podatke na odabranom disku!**
 - `n` - Nova particija
     - Krajnji sektor particije (veličina particije) se može zadati sa `+1G`, `+500M`, itd.
 - `t` - Definisanje tipa particije
@@ -46,8 +47,11 @@ Izmene se ne upisuju na disk pre nego što se izda `w` komanda.
 Ostale `linux` particije mogu biti na različitim diskovima
 
 ### Formatiranje
-***Formatiranje particije briše sve podatke na njoj!***  
-***Formatirati samo novokreirane particije!***
+
+> ⚠️ **Formatiranje particije briše sve podatke na njoj!**  
+> ⚠️ **Formatirati samo novokreirane particije!**
+
+
 
 ```sh
 mkfs.fat -F 32 dev_file_EFI_particije
@@ -103,7 +107,7 @@ genfstab -U /mnt >> /mnt/etc/fstab
 nano /mnt/etc/fstab
 ```
 Očitati generisan fajl u svrhu provere da li je sve u redu i izmeniti `fmask` i `dmask` za EFI particiju na `0077`.  
-***EFI particija nije nužno prva na listi!***
+> ⚠️ **EFI particija nije nužno prva na listi!**
 
 ### chroot u instaliran sistem
 ```sh
@@ -182,7 +186,8 @@ timeout 3
 console-mode max
 editor no
 ```
-Izvršiti `cat /etc/fstab`, prikazaće se spisak mountovanih particija na ekranu sa UUID-evima. Obratiti pažnju na **UUID** EFI particije (**nije nužno prva na listi!**), biće potreban kasnije.
+Izvršiti `cat /etc/fstab`, prikazaće se spisak mountovanih particija na ekranu sa UUID-evima. Obratiti pažnju na **UUID** EFI particije, biće potreban kasnije.
+> ⚠️ **EFI particija nije nužno prva na listi!**
 ```sh
 nano /boot/loader/entries/arch.conf
 ```

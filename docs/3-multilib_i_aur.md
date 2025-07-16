@@ -1,4 +1,4 @@
-# 1.3 Dodatni repozitorijumi
+# 3. Dodatni repozitorijumi
 ## Multilib
 Multilib repozitorijum sadrži 32-bit pakete. **Potreban je prilikom instalacije grafičkih drivera.**
 
@@ -38,4 +38,4 @@ yay -S naziv_paketa
 # Deinstalacija paketa se vrši putem pacman-a
 pacman -R naziv_paketa
 ```
-**Biti oprezan pri instalaciji paketa sa AUR-a!**
+> ⚠️ **Biti oprezan pri instalaciji paketa sa AUR-a!**
