@@ -1,6 +1,6 @@
 # 1 Arch Linux instalacija
 ## Boot sa eksternog uređaja
-Najpre, bootovati Arch Linux instalacioni mediji (USB drive, CD, itd.)
+Najpre, bootovati Arch Linux instalacioni uređaj (USB drive, CD, itd.)
 ## Internet za vreme instalacije
 ### Wi-Fi (Preskočiti ako je računar povezan na internet preko kabla)
 #### Listanje dostupnih SSID-a i povezivanje
@@ -24,8 +24,20 @@ Ukoliko veza sa internetom ne radi, moguće je da na mreži nema DHCP servera. U
 #### Listanje diskova i odabir diska
 ```sh
 fdisk -l
+```
+Obratiti pažnju na **dev file *diska*** na kome želite instalirati sistem.  
+Primer ispisa iz `fdisk -l`:
+```
+Disk /dev/nvme1n1: 465.76 GiB, 500107862016 bytes, 976773168 sectors
+```
+- Dev file ovog ***diska*** je: `/dev/nvme1n1`
+- Ostali dev fajlovi nabrojani ***ispod*** su dev fajlovi ***particija*** na tom disku
+    
+
+```
 fdisk dev_file_diska
 ```
+
 #### Komande
 Izmene se ne upisuju na disk pre nego što se izda `w` komanda.
 - `p` - Listanje particija
@@ -46,14 +58,12 @@ Izmene se ne upisuju na disk pre nego što se izda `w` komanda.
 - **Proizvoljna veličina** - `linux` (ovo će biti root particija)
 - **Ostale particije po želji** - `linux` (/home, /var, itd...)
 
-Ostale `linux` particije mogu biti na različitim diskovima
+Ostale `linux` particije mogu, po želji, biti i na različitim diskovima
 
 ### Formatiranje
 
 > ⚠️ **Formatiranje particije briše sve podatke na njoj!**  
 > ⚠️ **Formatirati samo novokreirane particije!**
-
-
 
 ```sh
 mkfs.fat -F 32 dev_file_EFI_particije
@@ -61,7 +71,6 @@ mkswap dev_file_swap_particije
 mkfs.ext4 dev_file_root_particije
 ```
 Ostale `linux` particije formatirati sa `mkfs.ext4`.  
-
 
 ### Mount-ovanje
 ```sh
@@ -73,7 +82,7 @@ Ostale `linux` particije montirati na odgovarajuće lokacije unutar `/mnt`, npr:
 ```sh
 mount dev_file_home_particije /mnt/home
 ```
-Već postojeće storage particije montirati u proizvoljnim folderima unutar `/mnt`, npr `/mnt/data` ili `/mnt/hdd1`.
+Već postojeće storage particije montirati u novim proizvoljnim folderima unutar `/mnt`, npr `/mnt/data` ili `/mnt/hdd1`.
 
 ## Instalacija sistema i alata
 ```sh
