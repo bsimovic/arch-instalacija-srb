@@ -1,4 +1,5 @@
-# Multilib
+# 1.3 Dodatni repozitorijumi
+## Multilib
 Multilib repozitorijum sadrži 32-bit pakete. **Potreban je prilikom instalacije grafičkih drivera.**
 
 ```sh
@@ -16,7 +17,7 @@ Sačuvati fajl i uraditi upgrade:
 sudo pacman -Syu
 ```
 
-# Arch user repository (AUR)
+## Arch user repository (AUR)
 Sadrži neoficijalne pakete dodate od strane korisnika.  
 Pakete je potrebno kompajlovati pomoću `makepkg` i instalirati putem `pacman`-a - koristićemo alat koji olakšava ovaj posao - `yay`.  
 
@@ -26,6 +27,8 @@ sudo pacman -S git base-devel
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
+cd ..
+rm -r yay
 ```
 `yay` se koristi slično kao `pacman`:
 ```sh

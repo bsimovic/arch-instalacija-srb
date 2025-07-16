@@ -1,4 +1,4 @@
-# Instalacija
+# 1.1 Instalacija
 ## Boot sa eksternog uređaja
 Najpre, bootovati Arch Linux instalacioni mediji (USB drive, CD, itd.)
 ## Internet za vreme instalacije
@@ -15,6 +15,8 @@ exit
 ```sh
 ping google.com
 ```
+
+Ukoliko veza sa internetom ne radi, moguće je da na mreži nema DHCP servera. U tom slučaju pogledati wiki za uputstvo kako podesiti statičku IP adresu: https://wiki.archlinux.org/title/Network_configuration#Static_IP_address.
 
 ## Diskovi, particije i fajl-sistemi
 ### `fdisk`
@@ -65,7 +67,7 @@ Ostale `linux` particije montirati na odgovarajuće lokacije unutar `/mnt`, npr:
 ```sh
 mount dev_file_home_particije /mnt/home
 ```
-Već postojeće particije sa podacima montirati u proizvoljnim folderima unutar `/mnt`, npr `/mnt/data` ili `/mnt/hdd1`.
+Već postojeće storage particije montirati u proizvoljnim folderima unutar `/mnt`, npr `/mnt/data` ili `/mnt/hdd1`.
 
 ## Instalacija sistema i alata
 ```sh
@@ -136,6 +138,12 @@ echo "LC_TIME=en_GB.UTF-8" >> /etc/locale.conf
 ```sh
 nano /etc/mkinitcpio.conf
 ```
+> ℹ️ Upotreba `nano`-a:
+> - `ctrl+o` - save  
+> - `ctrl+x` - exit
+> - `ctrl+f` - search
+> - `ctrl+g` - help
+
 Naći `HOOKS` property i dodati `resume` hook tako da linija izgleda ovako:
 ```
 HOOKS=(base udev autodetect microcode modconf kms keyboard keymap consolefont block filesystems resume fsck)

@@ -1,4 +1,4 @@
-# Secure boot konfiguracija
+# 1.2 Secure boot konfiguracija
 **Preskočiti ceo ovaj dokument ako secure boot nije potreban.**
 ## Bootovanje u setup mode
 Restartovati računar i u UEFI konfiguraciji ("u BIOS-u") uključiti ***secure boot setup mode***.  
@@ -26,13 +26,13 @@ Uglavnom su na spisku sledeći fajlovi:
 ```
 Svaki od njih potpisati sa:
 ```sh
-sbctl sign -s putanja_fajla
+sudo sbctl sign -s putanja_fajla
 ```
 
 ## Automatsko potpisivanje `systemd-boot` bootloader-a
 Ukoliko se koristi `systemd-boot` bootloader, neophodno je potpisati i njega sledećom komandom:
 ```sh
-sbctl sign -s -o /usr/lib/systemd/boot/efi/systemd-bootx64.efi.signed /usr/lib/systemd/boot/efi/systemd-bootx64.efi
+sudo sbctl sign -s -o /usr/lib/systemd/boot/efi/systemd-bootx64.efi.signed /usr/lib/systemd/boot/efi/systemd-bootx64.efi
 ```
 
 ## Restart

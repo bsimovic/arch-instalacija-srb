@@ -1,4 +1,4 @@
-# Grafički drajver
+# 1.4 Grafički drajver
 ## NVIDIA
 Glavni paket u zavisnosti od graficke karte:
 - `nvidia-open` - GTX 1650 i novije serije (GTX 20, 30, 40, 50...)
@@ -13,7 +13,16 @@ Dodatni paketi:
 - `lib32-vulkan-icd-loader` (multilib)
 - `nvtop`
 
-Instalirati jedan glavni paket i sve dodatne pakete putem `pacman`-a.
+**`nvidia-open`:**
+```sh
+sudo pacman -S nvidia-open nvidia-utils lib32-nvidia-utils nvidia-settings vulkan-icd-loader lib32-vulkan-icd-loader nvtop
+```
+
+**`nvidia`:**
+```sh
+sudo pacman -S nvidia nvidia-utils lib32-nvidia-utils nvidia-settings vulkan-icd-loader lib32-vulkan-icd-loader nvtop
+```
+
 
 ## AMD
 **Za veoma stare AMD/ATI grafičke karte, pogledati wiki: https://wiki.archlinux.org/title/AMDGPU**  
@@ -27,7 +36,10 @@ Paketi:
 - `lib32-vulkan-icd-loader` (multilib)
 - `amdgpu_top`
 
-Instalirati sve pakete putem `pacman`-a.
+```
+sudo pacman -S mesa lib32-mesa vulkan-radeon lib32-vulkan-radeon vulkan-icd-loader lib32-vulkan-icd-loader amdgpu_top
+```
+
 
 ## Intel
 **Za veoma stare Intel grafičke karte, pogledati wiki: https://wiki.archlinux.org/title/Intel_graphics**  
@@ -41,4 +53,6 @@ Paketi:
 - `lib32-vulkan-icd-loader` (multilib)
 - `nvtop`
 
-Instalirati sve pakete putem `pacman`-a.
+```
+sudo pacman -S mesa lib32-mesa vulkan-intel lib32-vulkan-intel vulkan-icd-loader lib32-vulkan-icd-loader nvtop
+```
