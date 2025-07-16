@@ -61,11 +61,11 @@ mount dev_file_root_particije /mnt
 mount --mkdir dev_file_EFI_particije /mnt/boot
 swapon dev_file_swap_particije
 ```
-Ostale `linux` montirati ih na odgovarajuće lokacije unutar `/mnt`, npr:
+Ostale `linux` particije montirati na odgovarajuće lokacije unutar `/mnt`, npr:
 ```sh
 mount dev_file_home_particije /mnt/home
 ```
-Već postojeće particije sa podacima montirati u proizvoljnom folderu unutar `/mnt`, npr `/mnt/data`.
+Već postojeće particije sa podacima montirati u proizvoljnim folderima unutar `/mnt`, npr `/mnt/data` ili `/mnt/hdd1`.
 
 ## Instalacija sistema i alata
 ```sh
