@@ -1,4 +1,4 @@
-# 1.1 Instalacija
+# 1.1 Arch Linux instalacija
 ## Boot sa eksternog uređaja
 Najpre, bootovati Arch Linux instalacioni mediji (USB drive, CD, itd.)
 ## Internet za vreme instalacije

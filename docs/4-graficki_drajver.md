@@ -1,4 +1,4 @@
-# 1.4 Grafički drajver
+# 4 Grafički drajver
 ## NVIDIA
 Glavni paket u zavisnosti od graficke karte:
 - `nvidia-open` - GTX 1650 i novije serije (GTX 20, 30, 40, 50...)

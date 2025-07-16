@@ -1,4 +1,5 @@
 # 1.1A Upotreba `pacman`-a
+Koristiti `sudo`
 ### Update repozitorijuma i svih paketa
 ```sh
 pacman -Syu
