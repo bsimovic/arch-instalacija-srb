@@ -75,7 +75,7 @@ Pri sledećem boot-u, pokrenuće se login screen u `sddm` session manager-u.
 Nakon logovanja pokrenuće se Plasma okruženje.
 
 ## Česta podešavanja
-Budući da je Plasma pruža grafički interfejs, većina podešavanja su samoobjašnjavajuća - ovde ću navesti neka najčešća koja potencijalno obaviti nakon prve insalacije sistema.  
+Budući da Plasma pruža grafički interfejs, većina podešavanja su samoobjašnjavajuća - ovde ću navesti neka najčešća koja se mogu potencijalno obaviti nakon prve insalacije sistema.  
 
 > ℹ️ Nijedno podešavanje nije obavezno.
 
