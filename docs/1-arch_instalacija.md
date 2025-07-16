@@ -19,6 +19,7 @@ ping google.com
 Ukoliko veza sa internetom ne radi, moguće je da na mreži nema DHCP servera. U tom slučaju pogledati wiki za uputstvo kako podesiti statičku IP adresu: https://wiki.archlinux.org/title/Network_configuration#Static_IP_address.
 
 ## Diskovi, particije i fajl-sistemi
+> ⚠️ **UPOZORENJE: Ukoliko ne znate šta radite - pogrešan korak sa `fdisk` alatom ili pri formatiranju particija može dovesti do nepovratnog gubitka podataka!**
 ### `fdisk`
 #### Listanje diskova i odabir diska
 ```sh
@@ -31,6 +32,7 @@ Izmene se ne upisuju na disk pre nego što se izda `w` komanda.
 - `g` - Nova GPT tabela (reset tabele particija)
 > ⚠️ **Kreiranje nove GPT tabele briše sve podatke na odabranom disku!**
 - `n` - Nova particija
+    - Početni sektor particije uvek odabrati ponuđen (samo `ENTER`)
     - Krajnji sektor particije (veličina particije) se može zadati sa `+1G`, `+500M`, itd.
 - `t` - Definisanje tipa particije
     - `uefi` - EFI particija
