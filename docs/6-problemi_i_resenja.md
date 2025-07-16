@@ -1,4 +1,7 @@
 # 6. Problemi i rešenja
+
+Rešenja za probleme na koje sam lično naišao pri upotrebi operativnog sistema.
+
 ## Povremeno pucketanje iz zvučnika
 ```sh
 echo "options snd_hda_intel power_save=0" | sudo tee -a /etc/modprobe.d/audio_disable_powersave.conf
