@@ -30,5 +30,5 @@ pacman -Qq
 
 ### Pretraga paketa
 ```sh
-pacman -Ss search_string
+pacman -Ss termin_za_pretragu
 ```

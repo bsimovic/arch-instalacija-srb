@@ -19,7 +19,9 @@ ping google.com
 Ukoliko veza sa internetom ne radi, moguće je da na mreži nema DHCP servera. U tom slučaju pogledati wiki za uputstvo kako podesiti statičku IP adresu: https://wiki.archlinux.org/title/Network_configuration#Static_IP_address.
 
 ## Diskovi, particije i fajl-sistemi
-> ⚠️ **UPOZORENJE: Pogrešan korak sa `fdisk` alatom ili pri formatiranju particija može dovesti do nepovratnog gubitka podataka! Nastavite samo ako znate šta radite!**
+> ⚠️ **UPOZORENJE: Pogrešan korak sa `fdisk` alatom ili pri formatiranju particija može dovesti do nepovratnog gubitka podataka!  
+> ⚠️ Nisam odgovoran za načinjenu štetu.  
+> ⚠️ Nastavite samo ako znate šta radite!**
 ### `fdisk`
 #### Listanje diskova i odabir diska
 ```sh
@@ -154,10 +156,10 @@ echo "LC_TIME=en_GB.UTF-8" >> /etc/locale.conf
 nano /etc/mkinitcpio.conf
 ```
 > ℹ️ Upotreba `nano`-a:
-> - `ctrl+o` - save  
-> - `ctrl+x` - exit
-> - `ctrl+f` - search
-> - `ctrl+g` - help
+> - `CTRL+o` - save  
+> - `CTRL+x` - exit
+> - `CTRL+f` - search
+> - `CTRL+g` - help
 
 Naći `HOOKS` property i dodati `resume` hook tako da linija izgleda ovako:
 ```
