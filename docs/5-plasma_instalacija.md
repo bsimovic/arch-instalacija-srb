@@ -96,7 +96,7 @@ Budući da Plasma pruža grafički interfejs, većina podešavanja su samoobjaš
 - System Settings ➡️ Keyboard ➡️ Shortcuts ➡️ Keyboard Layout Switcher ➡️ Switch to Next Keyboard Layout ➡️ Add... ➡️ (ALT+SHIFT)
 
 ### Podešavanje ekrana
-- System Settings ➡️ Display & Monitor* 
+- System Settings ➡️ Display & Monitor
     - Podesiti odgovarajući refresh rate
     - Podesiti pozicije u slučaju više ekrana
     - Podesiti HDR
@@ -115,7 +115,7 @@ Budući da Plasma pruža grafički interfejs, većina podešavanja su samoobjaš
 
 ### Regionalni formati
 - System Settings ➡️ Region & Language
-    - **Currency, Measurements, Paper Size, Address, Name Style, Phone Numbers** promeniti na **rpski**
+    - **Currency, Measurements, Paper Size, Address, Name Style, Phone Numbers** promeniti na **srpski**
     - **Time**
         - Prilikom promene na srpski, promeniće se i nazivi dana u nedelji na ćirilicu
         - Umesto toga, možete odabrati **British English (United Kingdom)** i promeniti prvi dan u nedelji na ponedeljak (sledeća sekcija)
