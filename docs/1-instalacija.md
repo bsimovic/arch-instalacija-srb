@@ -26,9 +26,9 @@ fdisk dev_file_diska
 #### Komande
 Izmene se ne upisuju na disk pre nego što se izda `w` komanda.
 - `p` - Listanje particija
-- `g` - Nova GPT tabela (reset tabele particija)
+- `g` - Nova GPT tabela (reset tabele particija - **briše sve podatke na disku**)
 - `n` - Nova particija
-    - Krajnji sektor particije (veličina particije) se može zadati sa `+1GB`, `+500MB`, itd.
+    - Krajnji sektor particije (veličina particije) se može zadati sa `+1G`, `+500M`, itd.
 - `t` - Definisanje tipa particije
     - `uefi` - EFI particija
     - `swap` - Swap particija
@@ -41,15 +41,19 @@ Izmene se ne upisuju na disk pre nego što se izda `w` komanda.
 - **Proizvoljna veličina** - `linux` (ovo će biti root particija)
 - **Ostale particije po želji** - `linux` (/home, /var, itd...)
 
-ostale `linux` particije mogu biti na različitim diskovima
+Ostale `linux` particije mogu biti na različitim diskovima
 
-#### Formatiranje
+### Formatiranje
+***Formatiranje particije briše sve podatke na njoj!***  
+***Formatirati samo novokreirane particije!***
+
 ```sh
 mkfs.fat -F 32 dev_file_EFI_particije
 mkswap dev_file_swap_particije
 mkfs.ext4 dev_file_root_particije
 ```
-Sve ostale `linux` particije formatirati sa `mkfs.ext4`
+Sve ostale `linux` particije formatirati sa `mkfs.ext4`.  
+
 
 ### Mount-ovanje
 ```sh
@@ -57,10 +61,11 @@ mount dev_file_root_particije /mnt
 mount --mkdir dev_file_EFI_particije /mnt/boot
 swapon dev_file_swap_particije
 ```
-Ako postoje dodatne particije, montirati ih na odgovarajuće lokacije unutar `/mnt`, npr:
+Dodatne `linux` particije, montirati ih na odgovarajuće lokacije unutar `/mnt`, npr:
 ```sh
 mount dev_file_home_particije /mnt/home
 ```
+Već postojeće particije sa podacima montirati u proizvoljnom folderu unutar `/mnt`, npr `/mnt/data`.
 
 ## Instalacija sistema i alata
 ```sh
@@ -123,12 +128,8 @@ nano /etc/locale.gen
 #   sr_RS@latin UTF-8
 
 locale-gen
-nano /etc/locale.conf
-```
-Uneti sledeće:
-```conf
-LANG=en_US.UTF-8
-LC_TIME=en_GB.UTF-8
+echo "LANG=en_US.UTF-8" >> /etc/locale.conf
+echo "LC_TIME=en_GB.UTF-8" >> /etc/locale.conf
 ```
 
 ### Uključivanje `resume` hook-a za hibernaciju sistema
@@ -147,11 +148,7 @@ mkinitcpio -P
 ### Definisanje hostname-a
 ```sh
 echo tvoj_hostname > /etc/hostname
-nano /etc/hosts
-```
-Uneti sledeće:
-```Finalni restart
-127.0.0.1 tvoj_hostname
+echo "127.0.0.1 tvoj_hostname" >> /etc/hosts
 ```
 
 ### Dodavanje korisnika
