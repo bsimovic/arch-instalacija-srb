@@ -29,11 +29,6 @@
 sudo pacman -S plasma-desktop plasma-nm plasma-pa plasma-firewall plasma-systemmonitor kscreen kinfocenter ksystemlog kwalletmanager sddm sddm-kcm xdg-desktop-portal-kde bluedevil power-profiles-daemon kde-gtk-config breeze-gtk cups print-manager konsole dolphin noto-fonts-cjk
 ```
 
-## Reboot
-```sh
-reboot
-```
-
 ## Dodatni softver
 ### Opšti alat
 Opcioni dodatani alat čiji ekvivalenti dolaze uz Windows
@@ -69,6 +64,15 @@ Dve opcije su:
 
 - `libreoffice-fresh` - Solidan office paket, doduše nekad malo nezgrapan za upotrebu
 - Korisćenje nekih od web aplikacija (Microsoft 365, Google Docs, etc...)
+
+
+## Reboot
+```sh
+reboot
+```
+
+Pri sledećem boot-u, pokrenuće se login screen u `sddm` session manager-u.  
+Nakon logovanja pokrenuće se Plasma okruženje.
 
 ## Česta podešavanja
 Budući da je Plasma pruža grafički interfejs, većina podešavanja su samoobjašnjavajuća - ovde ću navesti neka najčešća koja potencijalno obaviti nakon prve insalacije sistema.  
