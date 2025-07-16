@@ -1,11 +1,12 @@
-# 4 Grafički drajver
+# 4. Grafički drajver
 ## NVIDIA
 Glavni paket u zavisnosti od graficke karte:
-- `nvidia-open` - GTX 1650 i novije serije (GTX 20, 30, 40, 50...)
+- `nvidia-open` - GTX 1650/1660 i sve novije serije (GTX 20, 30, 40, 50...)
 - `nvidia` - GTX 750 do GTX 10 serije
 
-**Za veoma stare NVIDIA grafičke karte, pogledati wiki: https://wiki.archlinux.org/title/NVIDIA**  
-Dodatni paketi:
+> ℹ️ **Za veoma stare NVIDIA grafičke karte, pogledati wiki: https://wiki.archlinux.org/title/NVIDIA**  
+
+Dodatni neophodni paketi:
 - `nvidia-utils`
 - `lib32-nvidia-utils` (multilib)
 - `nvidia-settings`
@@ -25,7 +26,7 @@ sudo pacman -S nvidia nvidia-utils lib32-nvidia-utils nvidia-settings vulkan-icd
 
 
 ## AMD
-**Za veoma stare AMD/ATI grafičke karte, pogledati wiki: https://wiki.archlinux.org/title/AMDGPU**  
+> ℹ️ **Za veoma stare AMD/ATI grafičke karte, pogledati wiki: https://wiki.archlinux.org/title/AMDGPU**  
 
 Paketi:
 - `mesa`
@@ -42,7 +43,7 @@ sudo pacman -S mesa lib32-mesa vulkan-radeon lib32-vulkan-radeon vulkan-icd-load
 
 
 ## Intel
-**Za veoma stare Intel grafičke karte, pogledati wiki: https://wiki.archlinux.org/title/Intel_graphics**  
+> ℹ️ **Za veoma stare Intel grafičke karte, pogledati wiki: https://wiki.archlinux.org/title/Intel_graphics**  
 
 Paketi:
 - `mesa`

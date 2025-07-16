@@ -14,7 +14,7 @@
 - `sddm` - Menadžer sesija
 - `sddm-kcm` - Konfigurator sddm-a
 - `xdg-desktop-portal-kde` - Potrebno za razne desktop funkcionalnosti (file picker, drag-and-drop, itd.)
-- `bluedevil` - Bluetooth konfigurator
+- `bluedevil` - Bluetooth drajver
 - `powerdevil` - Power profile konfigurator
 - `power-profiles-daemon` - Integriše se sa `powerdevil`
 - `kde-gtk-config` - Sinhronizuje sistemsku temu sa GTK aplikacijama
@@ -68,7 +68,7 @@ Postoji gomila - navešću dva:
 Dve opcije su:
 
 - `libreoffice-fresh` - Solidan office paket, doduše nekad malo nezgrapan za upotrebu
-- Koristiti neku od web aplikacija (Microsoft 365, Google Docs, etc...)
+- Korisćenje nekih od web aplikacija (Microsoft 365, Google Docs, etc...)
 
 ## Česta podešavanja
 Budući da je Plasma pruža grafički interfejs, većina podešavanja su samoobjašnjavajuća - ovde ću navesti neka najčešća koja potencijalno obaviti nakon prve insalacije sistema.  
