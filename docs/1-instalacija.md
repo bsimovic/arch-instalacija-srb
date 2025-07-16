@@ -52,7 +52,7 @@ mkfs.fat -F 32 dev_file_EFI_particije
 mkswap dev_file_swap_particije
 mkfs.ext4 dev_file_root_particije
 ```
-Sve ostale `linux` particije formatirati sa `mkfs.ext4`.  
+Ostale `linux` particije formatirati sa `mkfs.ext4`.  
 
 
 ### Mount-ovanje
@@ -61,7 +61,7 @@ mount dev_file_root_particije /mnt
 mount --mkdir dev_file_EFI_particije /mnt/boot
 swapon dev_file_swap_particije
 ```
-Dodatne `linux` particije, montirati ih na odgovarajuće lokacije unutar `/mnt`, npr:
+Ostale `linux` montirati ih na odgovarajuće lokacije unutar `/mnt`, npr:
 ```sh
 mount dev_file_home_particije /mnt/home
 ```
