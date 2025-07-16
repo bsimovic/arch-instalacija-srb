@@ -80,49 +80,49 @@ Budući da Plasma pruža grafički interfejs, većina podešavanja su samoobjaš
 > ℹ️ Nijedno podešavanje nije obavezno.
 
 ### Isključivanje ubrzanja miša
-- **System Settings ➡️ Mouse & Touchpad ➡️ Enable pointer acceleration - OFF**
+- System Settings ➡️ Mouse & Touchpad ➡️ Enable pointer acceleration - OFF
 
 ### Isključivanje akcije na gornjem levom ćošku ekrana
-- **System Settings ➡️ Mouse & Touchpad ➡️ Screen Edges ➡️ (Gornji levi kvadratić) ➡️ No Action**
+- System Settings ➡️ Mouse & Touchpad ➡️ Screen Edges ➡️ (Gornji levi kvadratić) ➡️ No Action
 
 ### Maksimizacija prozora pri pomeranju na gornju ivicu ekrana
-- **System Settings ➡️ Mouse & Touchpad ➡️ Screen Edges ➡️ Maximize: Windows dragged to top edge - ON**
+- System Settings ➡️ Mouse & Touchpad ➡️ Screen Edges ➡️ Maximize: Windows dragged to top edge - ON
 
 ### Dodavanje jezika tastature
-- **System Settings ➡️ Keyboard ➡️ Keyboard ➡️ Layouts Enable - ON ➡️ Add...**
+- System Settings ➡️ Keyboard ➡️ Keyboard ➡️ Layouts Enable - ON ➡️ Add...
 
 ### Windows shortcut za System Monitor i promenu jezika tastature
-- **System Settings ➡️ Keyboard ➡️ Shortcuts ➡️ System Monitor ➡️ Launch ➡️ Add... ➡️ (CTRL+SHIFT+ESC)**  
-- **System Settings ➡️ Keyboard ➡️ Shortcuts ➡️ Keyboard Layout Switcher ➡️ Switch to Next Keyboard Layout ➡️ Add... ➡️ (ALT+SHIFT)**
+- System Settings ➡️ Keyboard ➡️ Shortcuts ➡️ System Monitor ➡️ Launch ➡️ Add... ➡️ (CTRL+SHIFT+ESC) 
+- System Settings ➡️ Keyboard ➡️ Shortcuts ➡️ Keyboard Layout Switcher ➡️ Switch to Next Keyboard Layout ➡️ Add... ➡️ (ALT+SHIFT)
 
 ### Podešavanje ekrana
-- **System Settings ➡️ Display & Monitor**  
+- System Settings ➡️ Display & Monitor* 
     - Podesiti odgovarajući refresh rate
     - Podesiti pozicije u slučaju više ekrana
     - Podesiti HDR
-    > **⚠️ Pažnja pri uključivanju HDR-a na NVIDIA grafičkim kartama!**
+    > ⚠️ Pažnja pri uključivanju HDR-a na NVIDIA grafičkim kartama!
 
 ### Isključivanje povećanja kursora pri brzom pomeranju
-- **System Settings ➡️ Accessibility ➡️ Shake Cursor ➡️ Enable - OFF**
+- System Settings ➡️ Accessibility ➡️ Shake Cursor ➡️ Enable - OFF
 
-### Uključivanje dark teme i promena boje kursora na belu (zašto bih hteo crni kursor ako je pozadina crna????)
-- **System Settings ➡️ Colors & Themes ➡️ Global Theme ➡️ Breeze Dark**  
-- **System Settings ➡️ Colors & Themes ➡️ Cursors ➡️ Breeze Light**
+### Uključivanje dark teme i promena boje kursora na belu (zašto bih hteo crni kursor na crnoj pozadini????)
+- System Settings ➡️ Colors & Themes ➡️ Global Theme ➡️ Breeze Dark
+- System Settings ➡️ Colors & Themes ➡️ Cursors ➡️ Breeze Light
 
 ### Promena SDDM teme
-- **System Settings ➡️ Colors & Themes ➡️ Login Screen (SDDM) ➡️ Breeze** 
-- **System Settings ➡️ Colors & Themes ➡️ Login Screen (SDDM) ➡️ Apply Plasma Settings**
+- System Settings ➡️ Colors & Themes ➡️ Login Screen (SDDM) ➡️ Breeze** 
+- System Settings ➡️ Colors & Themes ➡️ Login Screen (SDDM) ➡️ Apply Plasma Settings
 
 ### Regionalni formati
-- **System Settings ➡️ Region & Language**
+- System Settings ➡️ Region & Language
     - **Currency, Measurements, Paper Size, Address, Name Style, Phone Numbers** promeniti na **rpski**
     - **Time**
         - Prilikom promene na srpski, promeniće se i nazivi dana u nedelji na ćirilicu
         - Umesto toga, možete odabrati **British English (United Kingdom)** i promeniti prvi dan u nedelji na ponedeljak (sledeća sekcija)
 
 ### Promena prvog dana u nedelji na ponedeljak
-- **Desni klik na vreme u taskbar-u ➡️ Configure Digital Clock.. ➡️ Calendar ➡️ First day of the week: Monday**
+- Desni klik na vreme u taskbar-u ➡️ Configure Digital Clock.. ➡️ Calendar ➡️ First day of the week: Monday
 
 ### Podešavanje automatskog ulaska u Sleep mode
-- **System Settings ➡️ Power Management**
+- System Settings ➡️ Power Management
     - Podesiti proizvoljno
