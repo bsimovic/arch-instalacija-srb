@@ -51,13 +51,13 @@ Softver možete pretraživati na zvaničnom sajtu: https://snapcraft.io
 > ⚠️ **Slično flatpak-u, softver pribavljen preko snap-a radi u *sandbox-u*. Uprkos tome, svakako treba biti oprezan!**  
 > ⚠️ **Nikako ne menjati default repozitorijum!**  
 
-  
-
 ### Instalacija snap-a:
-Snap se nalazi na AUR-u. Za postupak instalacije, pogledati odeljak **"Arch user repository (AUR)"** u ovom dokumentu.
+Snap se nalazi na AUR-u:
 
 - **Naziv paketa**: `snapd`
 - **Git clone url:**: https://aur.archlinux.org/snapd.git
+
+> ℹ️ **Za uputstvo za instalaciju AUR paketa pogledati `3-upravljanje_paketima.md`, odeljak *"Arch user repository (AUR)"***
 
 Snap za sandboxing koristi `apparmor`, testirati da li je podešen:
 ```sh
@@ -77,7 +77,6 @@ Nakon instalacije neophodno je uključiti `snapd.socket` i `snapd.apparmor.servi
 sudo systemctl enable --now snapd.socket
 sudo systemctl enable --now snapd.apparmor.service
 ```
-
 
 ### Upotreba:
 #### Instalacija paketa:

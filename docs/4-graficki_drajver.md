@@ -3,6 +3,8 @@
 Instalirati skup paketa koji odgovara proizvođaču grafičke karte.  
 Ukoliko imate grafički hardver dva (ili više) različita proizvođača na istoj mašini (uglavnom slučaj kod laptopova), instalirati pakete za oba.
 
+> ℹ️ **Za uključivanje `multilib` repozitorijuma pogledati `3-upravljanje_paketima.md`, odeljak *"Multilib repozitorijum"***
+
 ## NVIDIA
 Glavni paket u zavisnosti od graficke karte:
 - `nvidia-open` - GTX 1650/1660 i sve novije serije (GTX 20, 30, 40, 50...)
