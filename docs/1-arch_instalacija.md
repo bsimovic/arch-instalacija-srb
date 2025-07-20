@@ -19,9 +19,8 @@ ping google.com
 Ukoliko veza sa internetom ne radi, moguće je da na mreži nema DHCP servera. U tom slučaju pogledati wiki za uputstvo kako podesiti statičku IP adresu: https://wiki.archlinux.org/title/Network_configuration#Static_IP_address.
 
 ## Diskovi, particije i fajl-sistemi
-> ⚠️ **UPOZORENJE: Pogrešan korak sa `fdisk` alatom ili pri formatiranju particija može dovesti do nepovratnog gubitka podataka!  
-> ⚠️ Nisam odgovoran za načinjenu štetu.  
-> ⚠️ Nastavite samo ako znate šta radite!**
+> ⚠️ **UPOZORENJE: Pogrešan korak sa `fdisk` alatom ili pri formatiranju particija može dovesti do nepovratnog gubitka podataka!**  
+> ⚠️ **Nisam odgovoran za načinjenu štetu. Nastavite samo ako ste sigurni da znate šta radite!** 
 ### `fdisk`
 #### Listanje diskova i odabir diska
 ```sh
@@ -35,7 +34,7 @@ Disk /dev/nvme1n1: 465.76 GiB, 500107862016 bytes, 976773168 sectors
 - Dev file ovog ***diska*** je: `/dev/nvme1n1`
 - Ostali dev fajlovi nabrojani ***ispod*** su dev fajlovi ***particija*** na tom disku
     
-
+Odabrati disk na kome ćete instalirati sistem:
 ```
 fdisk dev_file_diska
 ```
@@ -155,11 +154,11 @@ echo "LC_TIME=en_GB.UTF-8" >> /etc/locale.conf
 ```sh
 nano /etc/mkinitcpio.conf
 ```
-> ℹ️ Upotreba `nano`-a:
-> - `CTRL+o` - save  
-> - `CTRL+x` - exit
-> - `CTRL+f` - search
-> - `CTRL+g` - help
+> ℹ️ **Upotreba `nano`-a:**
+> - `CTRL+o` - **save**
+> - `CTRL+x` - **exit**
+> - `CTRL+f` - **find**
+> - `CTRL+g` - **help**
 
 Naći `HOOKS` property i dodati `resume` hook tako da linija izgleda ovako:
 ```

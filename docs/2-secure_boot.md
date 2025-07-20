@@ -5,17 +5,20 @@ Restartovati računar i u UEFI konfiguraciji ("u BIOS-u") uključiti ***secure b
 Neki proizvođači matičnih ploča ne nude eksplicitno tu opciju, u tom slučaju setup mode se uključuje tako što se obrišu svi već postojeći ključevi.  
 ## Generisanje i enrollovanje ključeva
 ```sh
-sudo pacman -S sbctl
-sudo sbctl status
+# root mode
+sudo su
+
+pacman -S sbctl
+sbctl status
 # Prikazaće da li je setup mode uključen ili nije
-sudo sbctl create-keys
-sudo sbctl enroll-keys -m
+sbctl create-keys
+sbctl enroll-keys -m
 # Uz kreirane, uvek treba da se enrolluju i Microsoft ključevi (-m), za svaki slučaj
 ```
 
 ## Potpisivanje kernel modula
 ```sh
-sudo sbctl verify
+sbctl verify
 ```
 Izlistaće se fajlovi koje treba potpisati, ignorisati linije sa `invalid_pe_header` greškom.  
 Uglavnom su na spisku sledeći fajlovi:
@@ -26,14 +29,14 @@ Uglavnom su na spisku sledeći fajlovi:
 ```
 Svaki od njih potpisati sa:
 ```sh
-sudo sbctl sign -s putanja_fajla
+sbctl sign -s putanja_fajla
 ```
 
 ## Automatsko potpisivanje `systemd-boot` bootloader-a
 Ukoliko se koristi `systemd-boot` bootloader, neophodno je potpisati i njega sledećom komandom:
 ```sh
-sudo sbctl sign -s -o /usr/lib/systemd/boot/efi/systemd-bootx64.efi.signed /usr/lib/systemd/boot/efi/systemd-bootx64.efi
+sbctl sign -s -o /usr/lib/systemd/boot/efi/systemd-bootx64.efi.signed /usr/lib/systemd/boot/efi/systemd-bootx64.efi
 ```
 
 ## Restart
-Možete restartovati računar i uključiti ***secure boot*** u UEFI konfiguraciji.
+Možete restartovati računar, **uključiti *secure boot*** i **isključiti *setup mode*** u UEFI konfiguraciji.

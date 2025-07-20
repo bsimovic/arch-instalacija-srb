@@ -21,6 +21,10 @@ sudo pacman -Syu
 Sadrži neoficijalne pakete dodate od strane korisnika.  
 Pakete je potrebno kompajlovati pomoću `makepkg` i instalirati putem `pacman`-a - koristićemo alat koji olakšava ovaj posao - `yay`.  
 
+> ⚠️ **Biti oprezan pri instalaciji paketa sa AUR-a!**  
+> ⚠️ **Dešavalo se da sadrži malware:**  
+>  https://www.bleepingcomputer.com/news/security/arch-linux-pulls-aur-packages-that-installed-chaos-rat-malware/
+
 ```sh
 cd ~
 sudo pacman -S git base-devel
@@ -32,10 +36,9 @@ rm -r yay
 ```
 `yay` se koristi slično kao `pacman`:
 ```sh
-# Instalacija paketa
+# Instalacija paketa - BEZ SUDO!
 yay -S naziv_paketa
 
 # Deinstalacija paketa se vrši putem pacman-a
-pacman -R naziv_paketa
+sudo pacman -R naziv_paketa
 ```
-> ⚠️ **Biti oprezan pri instalaciji paketa sa AUR-a!**

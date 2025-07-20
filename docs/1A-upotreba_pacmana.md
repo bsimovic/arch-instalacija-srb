@@ -5,13 +5,16 @@ Koristiti `sudo`
 pacman -Syu
 ```
 
+### Informacije o paketima
+```sh
+pacman -Sii naziv_paketa1 naziv_paketa2 ...
+```
+
 ### Instalacija ("sinhronizacija") paketa
 ```sh
 pacman -S naziv_paketa1 naziv_paketa2 ...
 ```
 `--needed` - Ne reinstaliraj već instalirane pakete
-
-### 
 
 ### Update paketa
 ```sh

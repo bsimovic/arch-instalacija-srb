@@ -1,4 +1,8 @@
 # 4. Grafički drajver
+
+Istalirajte skup paketa koji odgovara proizvođaču grafičke karte.  
+Ukoliko imate grafički hardver dva (ili više) različita proizvođača na istoj mašini (uglavnom slučaj kod laptopova), instalirajte pakete za oba.
+
 ## NVIDIA
 Glavni paket u zavisnosti od graficke karte:
 - `nvidia-open` - GTX 1650/1660 i sve novije serije (GTX 20, 30, 40, 50...)
@@ -24,6 +28,8 @@ sudo pacman -S nvidia-open nvidia-utils lib32-nvidia-utils nvidia-settings vulka
 sudo pacman -S nvidia nvidia-utils lib32-nvidia-utils nvidia-settings vulkan-icd-loader lib32-vulkan-icd-loader nvtop
 ```
 
+Monitoring alat: `nvtop`
+
 
 ## AMD
 > ℹ️ **Za veoma stare AMD/ATI grafičke karte, pogledati wiki: https://wiki.archlinux.org/title/AMDGPU**  
@@ -41,6 +47,8 @@ Paketi:
 sudo pacman -S mesa lib32-mesa vulkan-radeon lib32-vulkan-radeon vulkan-icd-loader lib32-vulkan-icd-loader amdgpu_top
 ```
 
+Monitoring alat: `amdgpu_top`
+
 
 ## Intel
 > ℹ️ **Za veoma stare Intel grafičke karte, pogledati wiki: https://wiki.archlinux.org/title/Intel_graphics**  
@@ -57,3 +65,5 @@ Paketi:
 ```
 sudo pacman -S mesa lib32-mesa vulkan-intel lib32-vulkan-intel vulkan-icd-loader lib32-vulkan-icd-loader nvtop
 ```
+
+Monitoring alat: `nvtop`
