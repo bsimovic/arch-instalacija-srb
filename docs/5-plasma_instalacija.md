@@ -112,7 +112,7 @@ Nakon logovanja pokrenuće se Plasma okruženje.
 
 ### Dodavanje jezika tastature
 - System Settings ➡️ Keyboard ➡️ Keyboard ➡️ Layouts Enable - ON ➡️ Add...
-    > ℹ️ Za instalaciju nestandardnih metoda unosa (japanski IME, kineski Pinyin, itd.) - obratiti se dokumentu `5A-dodatan_softver` odeljak **"Dodatni metodi unosa na tastaturi (`fcitx5`)"**
+    > ℹ️ Za instalaciju nestandardnih metoda unosa (japanski IME, kineski Pinyin, itd.) - obratiti se dokumentu `5B-dodatan_softver` odeljak **"Dodatni metodi unosa na tastaturi (fcitx5)"**
 
 ### Windows shortcut za System Monitor i promenu jezika tastature
 - System Settings ➡️ Keyboard ➡️ Shortcuts ➡️ System Monitor ➡️ Launch ➡️ Add... ➡️ (CTRL+SHIFT+ESC) 

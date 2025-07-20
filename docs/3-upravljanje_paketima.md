@@ -224,7 +224,7 @@ tar -xvzf naziv_fajla.tar.gz -C ~/naziv_foldera
 cd ~/naziv_foldera
 ```
 
-Naći izvršni fajl, dodati mu execute permisiju, i napraviti simboličku vezu u `/usr/local/bin`:
+Naći izvršni fajl, dodati mu execute permisiju i napraviti simboličku vezu u `/usr/local/bin`:
 ```sh
 sudo chmod +x izvrsni_fajl
 sudo ln -sf izvrsni_fajl /usr/local/bin/izvrsni_fajl
