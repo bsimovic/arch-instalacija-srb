@@ -126,10 +126,9 @@ Očitati generisan fajl u svrhu provere da li je sve u redu i izmeniti `fmask` i
 > - `CTRL+f` - **find**
 > - `CTRL+g` - **help**
 
-### chroot u instaliran sistem i update repozitorijuma:
+### chroot u instaliran sistem
 ```sh
 arch-chroot /mnt
-pacman -Sy
 ```
 
 ### Uključivanje mrežnog servisa i firewalla
