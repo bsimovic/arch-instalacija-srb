@@ -10,8 +10,10 @@ sudo su
 
 pacman -Sy
 pacman -S sbctl
+
 sbctl status
 # Prikazaće da li je setup mode uključen ili nije
+
 sbctl create-keys
 sbctl enroll-keys -m
 # Uz kreirane, uvek treba da se enrolluju i Microsoft ključevi (-m), za svaki slučaj
@@ -25,7 +27,7 @@ Izlistaće se fajlovi koje treba potpisati, ignorisati linije sa `invalid_pe_hea
 Uglavnom su na spisku sledeći fajlovi:
 ```
 /boot/EFI/BOOT/BOOTX64.EFI
-/boot/EFI/systemd/systemd-bootx64.efi
+/boot/EFI/systemd/systemd-bootx64.efi # Ukoliko koristite systemd-boot
 /boot/vmlinuz-linux
 ```
 Svaki od njih potpisati sa:
@@ -34,7 +36,7 @@ sbctl sign -s putanja_fajla
 ```
 
 ## Automatsko potpisivanje `systemd-boot` bootloader-a
-Ukoliko se koristi `systemd-boot` bootloader, neophodno je potpisati i njega sledećom komandom:
+Ukoliko se koristi `systemd-boot` bootloader, neophodno je izvršiti sledeća komanda da bi se bootloader automatski potpisao pri ažuriranju:
 ```sh
 sbctl sign -s -o /usr/lib/systemd/boot/efi/systemd-bootx64.efi.signed /usr/lib/systemd/boot/efi/systemd-bootx64.efi
 ```

@@ -83,7 +83,7 @@ pacman -S --needed base-devel git
 ```
 
 ### Pretraga paketa
-Pakete pretražujte na zvaničnom sajtu: https://aur.archlinux.org/packages  
+Paketi se mogu pretražiti na zvaničnom sajtu: https://aur.archlinux.org/packages  
 Sa stranice paketa, kopirati ***Git Clone URL***, biće potreban pri instalaciji.
 
 ### Preuzimanje i instalacija paketa
