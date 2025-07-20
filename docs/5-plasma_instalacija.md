@@ -36,7 +36,7 @@ Opcioni dodatani alat čiji ekvivalenti dolaze uz Windows
 - `gwenview` - Pregledač slika
 - `okular` - Pregledač PDF-ova
 - `kamoso` - Kamera
-- `spectacle` - Screenshot alativanju HD
+- `spectacle` - Screenshot alat
 - `kate` - GUI tekst editor
 - `qalculate-gtk` - Kalkulator (`kcalc` ne valja...)
 - `kolourpaint` - Paint
