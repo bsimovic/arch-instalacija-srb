@@ -207,7 +207,9 @@ sudo snap remove naziv_paketa
 ```
 
 ## Direktno preuzimanje softvera ("Windows način") *(Opciono)*
-> ⚠️ Direktno preuzimanje softvera sa oficijalnog sajta je preferabilno samo ***ako ga nema u Arch repozitorijumima, na flathub-u ili snap-u***.  
+> ⚠️ Direktno preuzimanje softvera sa oficijalnog sajta je alternativa za AUR, preporučljivo je samo ***ako nema traženog softvera u glavnim Arch repozitorijumima ili kao verifikovan paket na flathub-u ili snap-u***.  
+> ⚠️ Mana u poređenju sa AUR-om je nemogućnost automatskog ažuriranja.  
+> ⚠️ Kao i kod Windows-a, preuzimajte softver samo ako ste sigurni da je izvor siguran!
 
 Postoji nekoliko mogućnosti direktne distribucije:
 - Pre-kompajlovana izvršna datoteka (često upakovana sa dodatnim fajlovima u `.tar.gz` arhivi)
