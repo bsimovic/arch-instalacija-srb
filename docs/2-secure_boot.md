@@ -27,7 +27,7 @@ Izlistaće se fajlovi koje treba potpisati, ignorisati linije sa `invalid_pe_hea
 Uglavnom su na spisku sledeći fajlovi:
 ```
 /boot/EFI/BOOT/BOOTX64.EFI
-/boot/EFI/systemd/systemd-bootx64.efi # Ukoliko koristite systemd-boot
+/boot/EFI/systemd/systemd-bootx64.efi
 /boot/vmlinuz-linux
 ```
 Svaki od njih potpisati sa:
