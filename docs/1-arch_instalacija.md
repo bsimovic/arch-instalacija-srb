@@ -116,8 +116,15 @@ pacstrap -K /mnt base linux linux-firmware sudo networkmanager ufw pipewire pipe
 genfstab -U /mnt >> /mnt/etc/fstab
 nano /mnt/etc/fstab
 ```
+
 Očitati generisan fajl u svrhu provere da li je sve u redu i izmeniti `fmask` i `dmask` za EFI particiju na `0077`.  
 > ⚠️ **EFI particija nije nužno prva na listi!**
+
+> ℹ️ **Upotreba `nano`-a:**
+> - `CTRL+o` - **save**
+> - `CTRL+x` - **exit**
+> - `CTRL+f` - **find**
+> - `CTRL+g` - **help**
 
 ### chroot u instaliran sistem i update repozitorijuma:
 ```sh
@@ -153,11 +160,6 @@ echo "LC_TIME=en_GB.UTF-8" >> /etc/locale.conf
 ```sh
 nano /etc/mkinitcpio.conf
 ```
-> ℹ️ **Upotreba `nano`-a:**
-> - `CTRL+o` - **save**
-> - `CTRL+x` - **exit**
-> - `CTRL+f` - **find**
-> - `CTRL+g` - **help**
 
 Naći `HOOKS` property i dodati `resume` hook tako da linija izgleda ovako:
 ```
