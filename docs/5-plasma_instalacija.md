@@ -36,7 +36,7 @@ Opcioni dodatani alat čiji ekvivalenti dolaze uz Windows
 - `gwenview` - Pregledač slika
 - `okular` - Pregledač PDF-ova
 - `kamoso` - Kamera
-- `spectacle` - Screenshot alat
+- `spectacle` - Screenshot alativanju HD
 - `kate` - GUI tekst editor
 - `qalculate-gtk` - Kalkulator (`kcalc` ne valja...)
 - `kolourpaint` - Paint
@@ -48,10 +48,12 @@ sudo pacman -S ark gwenview okular kamoso spectacle kate qalculate-gtk kolourpai
 ```
 
 ### Screen share
-Ukoliko želite da "delite ekran" preko Discord-a, Zoom-a, itd. neophodan je `xwaylandvideobridge` AUR paket:
-```sh
-yay -S xwaylandvideobridge
-```
+Ukoliko želite da "delite ekran" preko Discord-a, Zoom-a, itd. neophodan je `xwaylandvideobridge` AUR paket.  
+
+- **Naziv paketa**: `xwaylandvideobridge`
+- **Git clone url:** https://aur.archlinux.org/xwaylandvideobridge.git
+
+> ℹ️ **Za instalaciju AUR paketa pogledati `3-izvori_softvera.md`, odeljak *"Arch user repository (AUR)"***
 
 > ⚠️ "Streamovanje" video igara na Discordu daje varirajuće performanse - **uglavnom je neupotrebljivo**!  
 > ⚠️ Trenutno nažalost ne postoji rešenje/alternativa za ovaj problem.
@@ -110,7 +112,7 @@ Nakon logovanja pokrenuće se Plasma okruženje.
 
 ### Dodavanje jezika tastature
 - System Settings ➡️ Keyboard ➡️ Keyboard ➡️ Layouts Enable - ON ➡️ Add...
-    > ℹ️ Za instalaciju nestandardnih metoda unosa (japanski IME, kineski Pinyin, itd.) - obratiti se dokumentu `5A-dodatni_softver_i_trikovi` odeljak `Dodatni metodi unosa na tastaturi`
+    > ℹ️ Za instalaciju nestandardnih metoda unosa (japanski IME, kineski Pinyin, itd.) - obratiti se dokumentu `5A-dodatan_softver` odeljak **"Dodatni metodi unosa na tastaturi (`fcitx5`)"**
 
 ### Windows shortcut za System Monitor i promenu jezika tastature
 - System Settings ➡️ Keyboard ➡️ Shortcuts ➡️ System Monitor ➡️ Launch ➡️ Add... ➡️ (CTRL+SHIFT+ESC) 

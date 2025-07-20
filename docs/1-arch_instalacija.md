@@ -2,7 +2,8 @@
 ## Boot sa eksternog uređaja
 Najpre, bootovati Arch Linux instalacioni uređaj (USB drive, CD, itd.)
 ## Internet za vreme instalacije
-### Wi-Fi (Preskočiti ako je računar povezan na internet preko kabla)
+### Wi-Fi
+> ℹ️ **Preskočiti ako je računar povezan na internet preko kabla**
 #### Listanje dostupnih SSID-a i povezivanje
 ```sh
 iwctl
@@ -19,7 +20,7 @@ ping google.com
 Ukoliko veza sa internetom ne radi, moguće je da na mreži nema DHCP servera. U tom slučaju pogledati wiki za uputstvo kako podesiti statičku IP adresu: https://wiki.archlinux.org/title/Network_configuration#Static_IP_address.
 
 ## Diskovi, particije i fajl-sistemi
-> ⚠️ **UPOZORENJE: Pogrešan korak sa `fdisk` alatom ili pri formatiranju particija može dovesti do nepovratnog gubitka podataka!**  
+> ⚠️ **UPOZORENJE: Pogrešan korak sa `fdisk` alatom ili pri formatiranju particija može dovesti do *nepovratnog gubitka podataka*!**  
 > ⚠️ **Nisam odgovoran za načinjenu štetu. Nastavite samo ako ste sigurni da znate šta radite!** 
 ### `fdisk`
 #### Listanje diskova i odabir diska
@@ -34,7 +35,7 @@ Disk /dev/nvme1n1: 465.76 GiB, 500107862016 bytes, 976773168 sectors
 - Dev file ovog ***diska*** je: `/dev/nvme1n1`
 - Ostali dev fajlovi nabrojani ***ispod*** su dev fajlovi ***particija*** na tom disku
     
-Odabrati disk na kome ćete instalirati sistem:
+Odabrati **disk** na kojem ćete instalirati sistem:
 ```
 fdisk dev_file_diska
 ```
@@ -43,7 +44,7 @@ fdisk dev_file_diska
 Izmene se ne upisuju na disk pre nego što se izda `w` komanda.
 - `p` - Listanje particija
 - `g` - Nova GPT tabela (reset tabele particija)
-> ⚠️ **Kreiranje nove GPT tabele briše sve podatke na odabranom disku!**
+    > ⚠️ **Kreiranje nove GPT tabele briše sve podatke na odabranom disku!**
 - `n` - Nova particija
     - Uvek odabrati ponuđen početni sektor particije (samo `ENTER`)
     - Krajnji sektor particije (veličina particije) se može zadati sa `+1G`, `+500M`, itd.
@@ -86,9 +87,6 @@ mount dev_file_home_particije /mnt/home
 Već postojeće storage particije montirati u novim proizvoljnim folderima unutar `/mnt`, npr `/mnt/data` ili `/mnt/hdd1`.
 
 ## Instalacija sistema i alata
-```sh
-pacman -Syu
-```
 #### Neophodni paketi
 - `base`, `linux`, `linux-firmware` - Sam operativni sistem 
 - `sudo` - Standardni alat za izdavanje komandi kao `root`
@@ -98,7 +96,7 @@ pacman -Syu
 - `nano` - CLI editor teksta
 - `man` - Linux manual
 
-#### Update za mikrokod, odabrati jedno u zavisnosti od CPU
+#### Update za mikrokod procesora, odabrati jedno u zavisnosti od proizvođača CPU:
 - Intel: `intel-ucode`
 - AMD: `amd-ucode`
 
@@ -121,9 +119,10 @@ nano /mnt/etc/fstab
 Očitati generisan fajl u svrhu provere da li je sve u redu i izmeniti `fmask` i `dmask` za EFI particiju na `0077`.  
 > ⚠️ **EFI particija nije nužno prva na listi!**
 
-### chroot u instaliran sistem
+### chroot u instaliran sistem i update repozitorijuma:
 ```sh
 arch-chroot /mnt
+pacman -Sy
 ```
 
 ### Uključivanje mrežnog servisa i firewalla
@@ -182,11 +181,15 @@ passwd
 # Dodavanje novog korisnika
 useradd -m -G wheel,storage,optical,audio,video tvoj_username
 passwd tvoj_username
+
 EDITOR=nano visudo
 ```
 Ukloniti `#` sa linije `%wheel ALL=(ALL) ALL` i sačuvati fajl.
 
 ## Podešavanje `systemd-boot` bootloader-a
+> ℹ️ **Ukoliko planirate da koristite drugi bootloader (npr. GRUB), preskočite ovu sekciju i potražite konfiguraciju na internetu.**
+
+
 ```sh
 bootctl install
 nano /boot/loader/loader.conf
@@ -210,7 +213,7 @@ title   Arch Linux
 linux   /vmlinuz-linux
 initrd  /amd-ucode.img
 initrd  /initramfs-linux.img
-options root=UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx rw
+options root=UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx rw lsm=landlock,lockdown,yama,integrity,apparmor,bpf
 ```
 **Intel:**
 ```
@@ -218,11 +221,15 @@ title   Arch Linux
 linux   /vmlinuz-linux
 initrd  /intel-ucode.img
 initrd  /initramfs-linux.img
-options root=UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx rw
+options root=UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx rw lsm=landlock,lockdown,yama,integrity,apparmor,bpf
 ```
-Sačuvati fajl i uključiti auto-update servis:
+
+> ℹ️ **Pri konfiguraciji bootloader-a, bitno je navesti kernel parametar `lsm=landlock,lockdown,yama,integrity,apparmor,bpf` da bi radio `apparmor`, koji je neophodan za `snap` package manager**.  
+
+Sačuvati fajl i uključiti auto-update servis i apparmor servis:
 ```sh
 systemctl enable systemd-boot-update
+systemctl enable apparmor
 ```
 
 ## Unmount i prvi boot sistema
