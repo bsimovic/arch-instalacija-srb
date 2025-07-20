@@ -210,7 +210,7 @@ sudo snap remove naziv_paketa
 > ⚠️ Direktno preuzimanje softvera sa oficijalnog sajta je preferabilno samo ***ako ga nema u Arch repozitorijumima, na flathub-u ili snap-u***.  
 
 Postoji nekoliko mogućnosti direktne distribucije:
-- Pre-kompajlovana izvršna datoteka (često upakova sa dodatnim fajlovima u `.tar.gz` arhivi)
+- Pre-kompajlovana izvršna datoteka (često upakovana sa dodatnim fajlovima u `.tar.gz` arhivi)
 - `.appimage` paket
 - `.deb` paket
 
@@ -225,7 +225,7 @@ cd ~/naziv_foldera
 Naći izvršni fajl, dodati mu execute permisiju, i napraviti simboličku vezu u `/usr/local/bin`:
 ```sh
 sudo chmod +x izvrsni_fajl
-sudo ln -sf izvrsni_fajl /usr/local/bin/izvrsni_fajl> ⚠️
+sudo ln -sf izvrsni_fajl /usr/local/bin/izvrsni_fajl
 ```
 
 ### `.appimage` paketi
