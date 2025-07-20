@@ -4,6 +4,8 @@
 
 ### Upotreba pacman-a
 #### Update repozitorijuma i svih paketa
+> ℹ️ Uraditi ovo sada ako već nije urađeno  
+
 ```sh
 sudo pacman -Syu
 ```

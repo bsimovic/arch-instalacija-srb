@@ -188,6 +188,7 @@ EDITOR=nano visudo
 Ukloniti `#` sa linije `%wheel ALL=(ALL) ALL` i sačuvati fajl.
 
 ## Podešavanje `systemd-boot` bootloader-a
+> ℹ️ **Ja koristim `systemd-boot` jer već dolazi uz sistem i prilično je jednostavan za razumevanje (ne baš i za konfiguraciju).**  
 > ℹ️ **Ukoliko planirate da koristite drugi bootloader (npr. GRUB), preskočite ovu sekciju i potražite konfiguraciju na internetu.**
 
 
