@@ -36,7 +36,7 @@ sbctl sign -s putanja_fajla
 ```
 
 ## Automatsko potpisivanje `systemd-boot` bootloader-a
-Ukoliko se koristi `systemd-boot` bootloader, neophodno je izvršiti sledeća komanda da bi se bootloader automatski potpisao pri ažuriranju:
+Ukoliko se koristi `systemd-boot` bootloader, neophodno je izvršiti sledeću komandu da bi se bootloader automatski potpisao pri ažuriranju:
 ```sh
 sbctl sign -s -o /usr/lib/systemd/boot/efi/systemd-bootx64.efi.signed /usr/lib/systemd/boot/efi/systemd-bootx64.efi
 ```
