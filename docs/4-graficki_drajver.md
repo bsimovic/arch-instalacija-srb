@@ -1,7 +1,7 @@
 # 4. Grafički drajver
 
-Istalirajte skup paketa koji odgovara proizvođaču grafičke karte.  
-Ukoliko imate grafički hardver dva (ili više) različita proizvođača na istoj mašini (uglavnom slučaj kod laptopova), instalirajte pakete za oba.
+Instalirati skup paketa koji odgovara proizvođaču grafičke karte.  
+Ukoliko imate grafički hardver dva (ili više) različita proizvođača na istoj mašini (uglavnom slučaj kod laptopova), instalirati pakete za oba.
 
 ## NVIDIA
 Glavni paket u zavisnosti od graficke karte:
