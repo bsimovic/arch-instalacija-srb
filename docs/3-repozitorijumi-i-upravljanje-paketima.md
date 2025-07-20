@@ -79,7 +79,7 @@ Sadrži neoficijalne pakete dodate od strane korisnika.
 - `base-devel` - kompajleri, linkeri, itd.
 - `git` - CLI za git source control sistem
 ```sh
-pacman -S --needed base-devel git
+sudo pacman -S --needed base-devel git
 ```
 
 ### Pretraga paketa
