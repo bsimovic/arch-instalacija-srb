@@ -1,4 +1,4 @@
-# 5.A Dodatan softver
+# 5.B Dodatan softver
 ***Softver opšte ili specifične namene koji možda želite a možda i ne.***
 
 ## Bolji shell (`zsh`)

@@ -4,11 +4,10 @@
 ## Flathub
 Package manager koji pruža pristup flathub-u se zove `flatpak`.  
 Flathub ima široku upotrebu i mnogi poznat softver se može naći na njemu.  
-Softver možete pretraživati na zvaničnom sajtu: https://flathub.org
+Softver možete pretraživati na sajtu: https://flathub.org
 
 > ℹ️ **Oficijalne distribucije softvera imaju ✅ (Verified) oznaku na flathub sajtu.**
 
-> ⚠️ **Softver pribavljen sa flathub-a je automatski *sandbox-ovan* tj. izolovan od ostatka sistema, tako da je generalno sigurniji od AUR-a. Uprkos tome, svakako treba biti oprezan!**    
 > ⚠️ **Nikako ne menjati default repozitorijum!**  
 
   
@@ -43,12 +42,11 @@ flatpak uninstall naziv_paketa
 
 ## Snapcraft
 Package manager koji pruža pristup snapcraft-u se zove `snap`.  
-Snap je na puno načina sličan "flatpak"-u. Mnogi softver se nalazi na oba, doduše, **često se zvanična distribucija nekog softvera nalazi na samo jednoj od ove dve platforme!**  
-Softver možete pretraživati na zvaničnom sajtu: https://snapcraft.io
+Snapcraft je na puno načina sličan flathub-u. Mnogi softver se nalazi na oba, doduše, **često se zvanična distribucija nekog softvera nalazi na samo jednoj od ove dve platforme!**  
+Softver možete pretraživati na sajtu: https://snapcraft.io
 
 > ℹ️ **Oficijalne distribucije softvera imaju ✅ (Verified) oznaku na snapcraft sajtu.**
 
-> ⚠️ **Slično flatpak-u, softver pribavljen preko snap-a radi u *sandbox-u*. Uprkos tome, svakako treba biti oprezan!**  
 > ⚠️ **Nikako ne menjati default repozitorijum!**  
 
 ### Instalacija snap-a:
@@ -102,14 +100,14 @@ sudo snap remove naziv_paketa
 ```
 
 ## Direktno preuzimanje softvera ("Windows način") *(Opciono)*
-> ⚠️ Direktno preuzimanje softvera sa oficijalnog sajta je alternativa za AUR, preporučljivo je samo ***ako nema traženog softvera u glavnim Arch repozitorijumima ili kao verifikovan paket na flathub-u ili snap-u***.  
-> ⚠️ Mana u poređenju sa AUR-om je nemogućnost automatskog ažuriranja.  
+> ⚠️ Direktno preuzimanje softvera sa oficijalnog sajta je alternativa za AUR, preporučljivo je samo ***ako nema traženog softvera u Arch repozitorijumima, na flathub-u ili snap-u***.  
 > ⚠️ Kao i kod Windows-a, preuzimajte softver samo ako ste sigurni da je izvor siguran!
 
 Postoji nekoliko mogućnosti direktne distribucije:
 - Pre-kompajlovana izvršna datoteka (često upakovana sa dodatnim fajlovima u `.tar.gz` arhivi)
 - `.appimage` paket
-- `.deb` paket
+- `.deb` paket (**Tražiti alternativu**)
+- `.rpm` paket (**Tražiti alternativu**)
 
 ### Pre-kompajlovane izvršne datoteke
 
@@ -134,22 +132,4 @@ Dodati execute permisiju i napraviti simboličku vezu u `/usr/local/bin`:
 # U folderu sa paketom
 sudo chmod +x naziv_fajla.appimage
 sudo ln -sf naziv_fajla.appimage /usr/local/bin/naziv_fajla
-```
-
-
-### `.deb` paketi
-
-> ⚠️ **Instalirajte `.deb` paket samo ako nemate drugu alternativu**
-
-Dodati execute permisiju i napraviti simboličku vezu u `/usr/local/bin`:
-
-Alat:
-```sh
-sudo pacman -S dpkg
-```
-
-Instalacija:
-```sh
-# U folderu sa paketom
-dpkg -i naziv_paketa.deb
 ```

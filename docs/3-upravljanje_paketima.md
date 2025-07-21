@@ -75,29 +75,45 @@ Sadrži neoficijalne pakete dodate od strane korisnika.
 
 > ℹ️ **Korišćenje "pomagača za AUR", npr. `yay`, se ne preporučuje od strane Arch Linux developera. Tako da ću ovde objasniti ručni proces instalacije paketa sa AUR-a.**
 
-### Potreban alat
-- `base-devel` - kompajleri, linkeri, itd.
-- `git` - CLI za git source control sistem
+### Konfiguracija
+#### Alat
+- `base-devel` - kompajleri, linkeri, itd. - između ostalog i `makepkg` alat koji je potreban za AUR
+- `git` - git source control CLI
 ```sh
 sudo pacman -S --needed base-devel git
+```
+
+#### Odabir foldera za čuvanje specifikacije paketa
+Napraviti proizvoljan folder unutar `~` (home) foldera, ja ću ga nazvati `.aur`.  
+U tom folderu ćemo čuvati `PKGBUILD` specifikacije **svih** AUR paketa.
+```sh
+mkdir ~/.aur
 ```
 
 ### Pretraga paketa
 Paketi se mogu pretražiti na zvaničnom sajtu: https://aur.archlinux.org/packages  
 Sa stranice paketa, kopirati ***Git Clone URL***, biće potreban pri instalaciji.
 
-### Preuzimanje i instalacija paketa
+### Preuzimanje i instalacija paketa:
 ```sh
-# Preuzimanje
-cd ~
+# Preći u prethodno kreiran .aur folder
+cd ~/.aur
+# Preuzeti specifikaciju paketa
 git clone git_clone_url
-# Napraviće se novi folder sa nazivom paketa
-cd naziv_paketa
+# Buildovanje i instalacija
+makepkg -si -D naziv_paketa
+```
+
+> ⚠️ **Ne brisati specifikaciju paketa, potrebna je za ažuriranje!**  
+
+### Ažuriranje paketa
+```sh
+# Preći u folder sa specifikacijom paketa
+cd ~/.aur/naziv_paketa
+# Ažurirati specifikaciju
+git pull
 # Buildovanje i instalacija
 makepkg -si
-# Nakon instalacije možete obrisati folder
-cd ..
-rm -rf naziv_paketa
 ```
 
 ### Deinstalacija paketa
