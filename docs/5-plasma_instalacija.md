@@ -23,15 +23,17 @@
 - `print-manager` - Menadžer štampača
 - `konsole` - Terminal emulator
 - `dolphin` - File explorer
-- `noto-fonts-cjk` - Fontovi za azijske jezike
+- `noto-fonts-cjk` - Noto fontovi
+- `ttf-liberation` - Liberation fontovi
+- `ttf-droid` - Droid fontovi
 
 ```sh
-sudo pacman -S plasma-desktop plasma-nm plasma-pa plasma-firewall plasma-systemmonitor kscreen kinfocenter ksystemlog kwalletmanager sddm sddm-kcm xdg-desktop-portal-kde bluedevil power-profiles-daemon kde-gtk-config breeze-gtk cups print-manager konsole dolphin noto-fonts-cjk
+sudo pacman -S plasma-desktop plasma-nm plasma-pa plasma-firewall plasma-systemmonitor kscreen kinfocenter ksystemlog kwalletmanager sddm sddm-kcm xdg-desktop-portal-kde bluedevil power-profiles-daemon kde-gtk-config breeze-gtk cups print-manager konsole dolphin noto-fonts-cjk ttf-liberation ttf-droid
 ```
 
 ## Softver
 ### Opšti alat
-Opcioni dodatani alat čiji ekvivalenti dolaze uz Windows
+***Opcioni dodatani alat čiji ekvivalenti dolaze uz Windows***
 - `ark` - Menadžer arhiva
 - `gwenview` - Pregledač slika
 - `okular` - Pregledač PDF-ova
@@ -47,8 +49,18 @@ Opcioni dodatani alat čiji ekvivalenti dolaze uz Windows
 sudo pacman -S ark gwenview okular kamoso spectacle kate qalculate-gtk kolourpaint gparted kweather
 ```
 
+### Microsoft fontovi
+***Standardni microsoft fontovi (Arial, Times New Roman, Comic Sans, itd.)***  
+***Potpuno opciono ali neke aplikacije će izgledati prirodnije***
+
+Nalazi se na AUR-u:
+- **Naziv paketa**: `ttf-ms-fonts`
+- **Git clone url:** https://aur.archlinux.org/ttf-ms-fonts.git
+
+> ℹ️ **Za uputstvo za instalaciju AUR paketa pogledati `3-upravljanje_paketima.md`, odeljak *"Arch user repository (AUR)"***
+
 ### Screen share
-Ukoliko želite da "delite ekran" preko Discord-a, Zoom-a, itd. neophodan je `xwaylandvideobridge` AUR paket.  
+***Ukoliko želite da "delite ekran" preko Discord-a, Zoom-a, itd. neophodan je `xwaylandvideobridge` AUR paket.***
 
 - **Naziv paketa**: `xwaylandvideobridge`
 - **Git clone url:** https://aur.archlinux.org/xwaylandvideobridge.git

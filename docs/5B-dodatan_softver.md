@@ -40,7 +40,7 @@ flatpak install discord
 sudo pacman -S telegram-desktop
 ```
 
-## Dodatni metodi unosa na tastaturi (`fcitx5`)
+## Dodatni metodi unosa na tastaturi
 ```
 sudo pacman -S fcitx5
 ```

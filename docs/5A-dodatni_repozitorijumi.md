@@ -106,8 +106,7 @@ sudo snap remove naziv_paketa
 Postoji nekoliko mogućnosti direktne distribucije:
 - Pre-kompajlovana izvršna datoteka (često upakovana sa dodatnim fajlovima u `.tar.gz` arhivi)
 - `.appimage` paket
-- `.deb` paket (**Tražiti alternativu**)
-- `.rpm` paket (**Tražiti alternativu**)
+- `.deb` ili `.rpm` paket (**Tražiti alternativu**)
 
 ### Pre-kompajlovane izvršne datoteke
 
