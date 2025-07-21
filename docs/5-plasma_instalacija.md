@@ -14,9 +14,9 @@
 - `sddm` - Menadžer sesija
 - `sddm-kcm` - Konfigurator sddm-a
 - `xdg-desktop-portal-kde` - Potrebno za razne desktop funkcionalnosti (file picker, drag-and-drop, itd.)
-- `bluedevil` - Bluetooth drajver
+- `bluedevil` - Bluetooth konfigurator
 - `powerdevil` - Power profile konfigurator
-- `power-profiles-daemon` - Integriše se sa `powerdevil`
+- `power-profiles-daemon` - Servis za upravljanje power profilima
 - `kde-gtk-config` - Sinhronizuje sistemsku temu sa GTK aplikacijama
 - `breeze-gtk` - KDE Breeze tema za GTK
 - `cups` - Server za štampanje
