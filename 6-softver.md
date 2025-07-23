@@ -37,15 +37,11 @@ Nalazi se na AUR-u:
 - **Naziv paketa**: `ttf-ms-fonts`
 - **Git clone url:** https://aur.archlinux.org/ttf-ms-fonts.git
 
-> ℹ️ **Za uputstvo za instalaciju AUR paketa pogledati `3-upravljanje_paketima.md`, odeljak *"Arch user repository (AUR)"***
-
 ## Screen share
 ***Ukoliko želite da "delite ekran" preko Discord-a, Zoom-a, itd. neophodan je `xwaylandvideobridge` AUR paket.***
 
 - **Naziv paketa**: `xwaylandvideobridge`
 - **Git clone url:** https://aur.archlinux.org/xwaylandvideobridge.git
-
-> ℹ️ **Za uputstvo za instalaciju AUR paketa pogledati `3-upravljanje_paketima.md`, odeljak *"Arch user repository (AUR)"***
 
 > ⚠️ "Streamovanje" video igara na Discordu daje varirajuće performanse - **uglavnom je neupotrebljivo**!  
 > ⚠️ Trenutno nažalost ne postoji rešenje/alternativa za ovaj problem.
