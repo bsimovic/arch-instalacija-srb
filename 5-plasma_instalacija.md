@@ -1,4 +1,6 @@
 # 5. Instalacija Plasma desktop okruženja
+> ℹ️ **Ukoliko želite neko drugo desktop okruženje (ili ne želite nijedno), možete preskočiti ovaj dokument.**
+
 ## Paketi
 ### Neophodni paketi
 
@@ -19,7 +21,7 @@
 - `power-profiles-daemon` - Servis za upravljanje power profilima
 - `kde-gtk-config` - Sinhronizuje sistemsku temu sa GTK aplikacijama
 - `breeze-gtk` - KDE Breeze tema za GTK
-- `cups` - Server za štampanje
+- `cups` - Servis za štampanje
 - `print-manager` - Menadžer štampača
 - `konsole` - Terminal emulator
 - `dolphin` - File explorer
@@ -35,13 +37,14 @@ sudo pacman -S plasma-desktop plasma-nm plasma-pa plasma-firewall plasma-systemm
 ### Opšti alat
 ***Opcioni dodatani alat čiji ekvivalenti dolaze uz Windows***
 - `ark` - Menadžer arhiva
+- `kclock` - Time, štoperica, itd.
 - `gwenview` - Pregledač slika
 - `okular` - Pregledač PDF-ova
 - `kamoso` - Kamera
-- `spectacle` - Screenshot alat
+- `spectacle` - Screenshot alat (Po uzoru na "Snipping Tool" iz Windowsa)
 - `kate` - GUI tekst editor
 - `qalculate-gtk` - Kalkulator (`kcalc` ne valja...)
-- `kolourpaint` - Paint
+- `kolourpaint` - Paint (Po uzoru na "Paint" iz Windows XP i ranije)
 - `gparted` - GUI menadžer diskova i particija
 - `kweather` - Vremenska prognoza
 
@@ -51,7 +54,7 @@ sudo pacman -S ark gwenview okular kamoso spectacle kate qalculate-gtk kolourpai
 
 ### Microsoft fontovi
 ***Standardni microsoft fontovi (Arial, Times New Roman, Comic Sans, itd.)***  
-***Potpuno opciono ali neke aplikacije će izgledati prirodnije***
+***Potpuno opciono ali neke aplikacije će izgledati prirodnije.***
 
 Nalazi se na AUR-u:
 - **Naziv paketa**: `ttf-ms-fonts`
@@ -86,6 +89,9 @@ Postoji gomila - navešću dva:
     - `vlc-plugins-all` - Neophodan paket sa kodecima
 - `mpv` - CLI player, ne preterano user-friendly ali veoma lightweight
     - Obratiti se zvaničnoj dokumentaciji za upotrebu: https://mpv.io/manual/stable/
+
+Ako je potrebno i nešto više prilagođeno muzici:
+- `elisa` - lep GUI music player
 
 ### Office paket
 Dve opcije su:

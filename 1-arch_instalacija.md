@@ -180,7 +180,7 @@ echo "127.0.0.1 tvoj_hostname" >> /etc/hosts
 # Promena root lozinke
 passwd
 # Dodavanje novog korisnika
-useradd -m -G wheel,storage,optical,audio,video tvoj_username
+useradd -m -G wheel tvoj_username
 passwd tvoj_username
 
 EDITOR=nano visudo
@@ -215,7 +215,7 @@ title   Arch Linux
 linux   /vmlinuz-linux
 initrd  /amd-ucode.img
 initrd  /initramfs-linux.img
-options root=UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx rw lsm=landlock,lockdown,yama,integrity,apparmor,bpf
+options root=UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx rw
 ```
 **Intel:**
 ```
@@ -223,14 +223,11 @@ title   Arch Linux
 linux   /vmlinuz-linux
 initrd  /intel-ucode.img
 initrd  /initramfs-linux.img
-options root=UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx rw lsm=landlock,lockdown,yama,integrity,apparmor,bpf
+options root=UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx rw
 ```
 
-> ℹ️ **Pri konfiguraciji bootloader-a, bitno je navesti kernel parametar `lsm=landlock,lockdown,yama,integrity,apparmor,bpf` da bi radio `apparmor`, koji je neophodan za `snap` package manager**.  
-
-Sačuvati fajl i uključiti auto-update servis i apparmor servis:
+Sačuvati fajl i uključiti auto-update servis:
 ```sh
-systemctl enable systemd-boot-update
 systemctl enable apparmor
 ```
 

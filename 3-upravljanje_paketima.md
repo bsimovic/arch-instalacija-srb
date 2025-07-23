@@ -4,7 +4,8 @@
 
 ### Upotreba pacman-a
 #### Update repozitorijuma i svih paketa
-> ℹ️ Uraditi ovo sada ako već nije urađeno  
+> ℹ️ Raditi ažuriranje s vremena na vreme   
+> ℹ️ Uraditi sada ako već nije urađeno  
 
 ```sh
 sudo pacman -Syu
@@ -44,7 +45,7 @@ Ili na sajtu: https://archlinux.org/packages/
 
 ## Multilib repozitorijum
 `pacman` je po default-u konfigurisan samo za pristup `core` i `extra` repozitorijumima.  
-Multilib je dodatni oficijalni Arch repozitorijum koji sadrži 32-bit pakete.  
+`multilib` je dodatni oficijalni Arch repozitorijum koji sadrži 32-bit pakete.  
 > ℹ️ **Multilib repozitorijum je neophodan za instalaciju grafičkih drivera.**  
 
 ### Uključivanje:

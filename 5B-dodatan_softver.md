@@ -25,6 +25,33 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 ```
 
+![Prompt](./assets/zsh_prompt.png)
+
+## Dropdown terminal (`yakuake`)
+***Veoma korisno ako često koristite terminal.***
+```sh
+sudo pacman -S yakuake
+```
+
+Promena default shell-a:
+```
+chsh -s $(which zsh)
+```
+
+Pri prvom pokretanju, pratite uputstvo na ekranu za konfiguraciju `zsh`-a.  
+
+Za lepši prompt i obojeni prikaz defaultnih linux alata, dodati u `~/.zhsrc`:
+```
+PROMPT='%F{green}%T%f %B%F{lightblue}%d%f%F{green}>%f%b '
+
+alias ls='ls --color=auto'
+alias dir='dir --color=auto'
+alias vdir='vdir --color=auto'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+```
+
 ## Discord
 **Preporučujem korišćenje flathub paketa**, zbog toga što je on jedini zvanično verifikovan i održavan od strane Discord developera.  
 
@@ -32,7 +59,7 @@ alias egrep='egrep --color=auto'
 > ⚠️ Ako vam je to neophodno, instalirajte `discord` paket preko pacman-a. 
 
 ```sh
-flatpak install discord
+flatpak install com.discordapp.Discord
 ```
 
 ## Telegram
