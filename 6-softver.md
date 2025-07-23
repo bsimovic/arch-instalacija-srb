@@ -4,7 +4,7 @@
 ## Opšti alat za Plasmu
 ***Opcioni dodatani alat čiji ekvivalenti dolaze uz Windows***
 - `ark` - Menadžer arhiva
-- `kclock` - Time, štoperica, itd.
+- `kclock` - Tajmer, štoperica, itd.
 - `gwenview` - Pregledač slika
 - `okular` - Pregledač PDF-ova
 - `kamoso` - Kamera
