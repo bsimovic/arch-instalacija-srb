@@ -40,7 +40,7 @@ flatpak list --app
 flatpak uninstall naziv_paketa
 ```
 
-## Direktno preuzimanje softvera ("Windows način") *(Opciono)*
+## Direktno preuzimanje softvera ("Windows način")
 > ⚠️ Direktno preuzimanje softvera sa oficijalnog sajta je alternativa za AUR, preporučljivo je samo ***ako nema traženog softvera u Arch repozitorijumima ili na flathub-u***.  
 > ⚠️ Kao i kod Windows-a, preuzimajte softver samo ako ste sigurni da je izvor siguran!
 

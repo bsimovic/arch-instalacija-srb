@@ -30,78 +30,8 @@
 - `ttf-droid` - Droid fontovi
 
 ```sh
-sudo pacman -S plasma-desktop plasma-nm plasma-pa plasma-firewall plasma-systemmonitor kscreen kinfocenter ksystemlog kwalletmanager sddm sddm-kcm xdg-desktop-portal-kde bluedevil power-profiles-daemon kde-gtk-config breeze-gtk cups print-manager konsole dolphin noto-fonts-cjk ttf-liberation ttf-droid
+sudo pacman -S plasma-desktop plasma-nm plasma-pa plasma-firewall plasma-systemmonitor kscreen kinfocenter ksystemlog kwalletmanager sddm sddm-kcm xdg-desktop-portal-kde bluedevil powerdevil power-profiles-daemon kde-gtk-config breeze-gtk cups print-manager konsole dolphin noto-fonts-cjk ttf-liberation ttf-droid
 ```
-
-## Softver
-### Opšti alat
-***Opcioni dodatani alat čiji ekvivalenti dolaze uz Windows***
-- `ark` - Menadžer arhiva
-- `kclock` - Time, štoperica, itd.
-- `gwenview` - Pregledač slika
-- `okular` - Pregledač PDF-ova
-- `kamoso` - Kamera
-- `spectacle` - Screenshot alat (Po uzoru na "Snipping Tool" iz Windowsa)
-- `kate` - GUI tekst editor
-- `qalculate-gtk` - Kalkulator (`kcalc` ne valja...)
-- `kolourpaint` - Paint (Po uzoru na "Paint" iz Windows XP i ranije)
-- `gparted` - GUI menadžer diskova i particija
-- `kweather` - Vremenska prognoza
-
-```sh
-sudo pacman -S ark gwenview okular kamoso spectacle kate qalculate-gtk kolourpaint gparted kweather
-```
-
-### Microsoft fontovi
-***Standardni microsoft fontovi (Arial, Times New Roman, Comic Sans, itd.)***  
-***Potpuno opciono ali neke aplikacije će izgledati prirodnije.***
-
-Nalazi se na AUR-u:
-- **Naziv paketa**: `ttf-ms-fonts`
-- **Git clone url:** https://aur.archlinux.org/ttf-ms-fonts.git
-
-> ℹ️ **Za uputstvo za instalaciju AUR paketa pogledati `3-upravljanje_paketima.md`, odeljak *"Arch user repository (AUR)"***
-
-### Screen share
-***Ukoliko želite da "delite ekran" preko Discord-a, Zoom-a, itd. neophodan je `xwaylandvideobridge` AUR paket.***
-
-- **Naziv paketa**: `xwaylandvideobridge`
-- **Git clone url:** https://aur.archlinux.org/xwaylandvideobridge.git
-
-> ℹ️ **Za uputstvo za instalaciju AUR paketa pogledati `3-upravljanje_paketima.md`, odeljak *"Arch user repository (AUR)"***
-
-> ⚠️ "Streamovanje" video igara na Discordu daje varirajuće performanse - **uglavnom je neupotrebljivo**!  
-> ⚠️ Trenutno nažalost ne postoji rešenje/alternativa za ovaj problem.
-
-
-### Web pregledač
-Odabrati i instalirati željeni web pregledač, navešću najpopularnije:
-- `firefox`
-- `chromium`
-- `google-chrome` (AUR)
-- `vivaldi`
-- `brave` (AUR)
-
-### Media player
-Postoji gomila - navešću dva:
-
-- `vlc` - popularan GUI player, dostupan i za Windows
-    - `vlc-plugins-all` - Neophodan paket sa kodecima
-- `mpv` - CLI player, ne preterano user-friendly ali veoma lightweight
-    - Obratiti se zvaničnoj dokumentaciji za upotrebu: https://mpv.io/manual/stable/
-
-Ako je potrebno i nešto više prilagođeno muzici:
-- `elisa` - lep GUI music player
-
-### Office paket
-Dve opcije su:
-
-- `libreoffice-fresh` - veoma dobar office paket - može sve što i najnovije verzije Microsoft Office-a
-    - Ume biti malo nezgrapan za upotrebu, pogotovo ako ste navikli na moderan MS Office (UI LibreOffice-a podseća na MS Office 2003)
-- Korisćenje nekih od web aplikacija (Microsoft 365, Google Docs, etc...)
-> ℹ️ Moderne verzije MS Office-a su previše duboko integrisane sa raznim komponentama Windows-a - **neće raditi na Linuksu preko `wine`-a!**  
-
-
 
 ## Reboot
 ```sh
@@ -132,7 +62,7 @@ Nakon logovanja pokrenuće se Plasma okruženje.
 - System Settings ➡️ Keyboard ➡️ Keyboard ➡️ Layouts Enable - ON ➡️ Add...
     > ℹ️ Za instalaciju nestandardnih metoda unosa (japanski IME, kineski Pinyin, itd.) - obratiti se dokumentu `5B-dodatan_softver` odeljak **"Dodatni metodi unosa na tastaturi (fcitx5)"**
 
-### Windows shortcut za System Monitor i promenu jezika tastature
+### Keyboard shortcut za System Monitor i promenu jezika tastature
 - System Settings ➡️ Keyboard ➡️ Shortcuts ➡️ System Monitor ➡️ Launch ➡️ Add... ➡️ (CTRL+SHIFT+ESC) 
 - System Settings ➡️ Keyboard ➡️ Shortcuts ➡️ Keyboard Layout Switcher ➡️ Switch to Next Keyboard Layout ➡️ Add... ➡️ (ALT+SHIFT)
 
