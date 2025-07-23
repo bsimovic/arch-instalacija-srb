@@ -8,8 +8,7 @@ Neki proizvođači matičnih ploča ne nude eksplicitno tu opciju, u tom slučaj
 # root mode
 sudo su
 
-pacman -Sy
-pacman -S sbctl
+pacman -Sy sbctl
 
 sbctl status
 # Prikazaće da li je setup mode uključen ili nije

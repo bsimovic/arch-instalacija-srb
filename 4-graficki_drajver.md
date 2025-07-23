@@ -7,7 +7,7 @@ Ukoliko imate grafički hardver dva (ili više) različita proizvođača na isto
 
 ## NVIDIA
 Glavni paket u zavisnosti od graficke karte:
-- `nvidia-open` - GTX 1650/1660 i sve novije serije (GTX 20, 30, 40, 50...)
+- `nvidia-open` - GTX 1650/1660 i sve novije serije (RTX 20, 30, 40, 50...)
 - `nvidia` - GTX 750 do GTX 10 serije
 
 > ℹ️ **Za veoma stare NVIDIA grafičke karte, pogledati wiki: https://wiki.archlinux.org/title/NVIDIA**  
