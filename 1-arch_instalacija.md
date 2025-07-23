@@ -149,6 +149,7 @@ nano /etc/locale.gen
 #   en_GB.UTF-8 UTF-8
 #   sr_RS UTF-8
 #   sr_RS@latin UTF-8
+#   ...ostali lokali po želji
 
 locale-gen
 echo "LANG=en_US.UTF-8" >> /etc/locale.conf
@@ -228,7 +229,7 @@ options root=UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx rw
 
 Sačuvati fajl i uključiti auto-update servis:
 ```sh
-systemctl enable apparmor
+systemctl enable systemd-boot-update
 ```
 
 ## Unmount i prvi boot sistema
