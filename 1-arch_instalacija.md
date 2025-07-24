@@ -134,7 +134,6 @@ arch-chroot /mnt
 ### Uključivanje mrežnog servisa i firewalla
 ```
 systemctl enable NetworkManager
-systemctl stop iptables
 systemctl disable iptables
 systemctl enable ufw
 ```
@@ -204,8 +203,8 @@ timeout 3
 console-mode max
 editor no
 ```
-Izvršiti `cat /etc/fstab`, prikazaće se spisak mountovanih particija na ekranu sa UUID-evima. Obratiti pažnju na **UUID** EFI particije, biće potreban kasnije.
-> ⚠️ **EFI particija nije nužno prva na listi!**
+Izvršiti `cat /etc/fstab`, prikazaće se spisak mountovanih particija na ekranu sa UUID-evima. Obratiti pažnju na **UUID** root (`/`) particije, biće potreban kasnije.
+> ⚠️ **Root particija nije nužno prva na listi!**
 ```sh
 nano /boot/loader/entries/arch.conf
 ```
