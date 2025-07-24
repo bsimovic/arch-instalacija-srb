@@ -208,7 +208,7 @@ Izvršiti `cat /etc/fstab`, prikazaće se spisak mountovanih particija na ekranu
 ```sh
 nano /boot/loader/entries/arch.conf
 ```
-Uneti sledeći sadržaj ***u zavisnosti od procesora*** i `x`-eve zameniti prethodno prikazanim UUID-jem EFI particije:   
+Uneti sledeći sadržaj ***u zavisnosti od procesora*** i `x`-eve zameniti prethodno prikazanim UUID-jem root particije:   
 **AMD:**
 ```
 title   Arch Linux
