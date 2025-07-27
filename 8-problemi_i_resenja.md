@@ -46,8 +46,32 @@ sudo ntfsfix -d dev_file_diska
 
 ## Sistem ne prepoznaje zvučni uređaj koji podržava virtuelni Surround
 
-***WIP***
+Napraviti novu Pipewire konfiguraciju:
+```sh
+mkdir ~/.config/pipewire
+cp /usr/share/pipewire/pipewire.conf ~/.config/pipewire/pipewire.conf
+```
 
+Kopirati sadržaj `assets/surround.conf` datoteke sa ovog git repozitorijuma u `~/.config/pipewire/pipewire.conf` pod `context.modules`, dakle:
+
+```conf
+# Pronaći liniju context.modules
+...
+context.modules = [
+...
+
+# Kopirati sadžaj surround.conf ovde
+]
+...
+```
+
+Preuzeti odgovarajući HeSuVi `.wav` fajl sa https://airtable.com/appayGNkn3nSuXkaz/shruimhjdSakUPg2m/tbloLjoZKWJDnLtTc.   
+Npr. ako imate Razer slušalice, kliknite na "*Download WAV*" u "*razer*" redu.
+Sačuvajte ga na lokaciji: `~/.config/pipewire` sa imenom `hesuvi.wav`.
+
+Unutar `~/.config/pipewire/pipewire.conf` uradite find and replace (CTRL+h) - zameniti string `hrir_hesuvi/hrir.wav` sa ***apsolutnom putanjom do `hesuvi.wav` fajla***, dakle: `/home/VAŠ_USERNAME/.config/pipewire/hesuvi.wav`.
+
+Restartovati računar, i pri sledećem boot-u promeniti sound output device na **Virtual Surround Sink**.
 ## Crn ekran nakon uključivanja HDR-a
 
 ***WIP***

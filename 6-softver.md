@@ -117,10 +117,10 @@ flatpak install com.discordapp.Discord
 ## Ostalo
 ***Ostale aplikacije koje ja koristim***
 
-- Telegram: `telegram-desktop`
+- Telegram: `org.telegram.desktop` (flathub)
 - Viber: `com.viber.Viber` (flathub)
 - Spotify: `spotify-launcher`
-- KeePassXC: `keepassxc` 
+- KeePassXC: `org.keepassxc.KeePassXC` (flathub) 
 - Visual Studio Code: `visual-studio-code-bin` (AUR)
 - btop: `btop` 
 - Steam, Lutris, RetroArch, itd.
