@@ -2,4 +2,5 @@
 
 ***Work in progress***
 
-Primarno napisana da samom sebi olakšam život...  
+Primarno napisano da samom sebi olakšam život...  
+

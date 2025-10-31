@@ -9,30 +9,21 @@ echo "options snd_hda_intel power_save=0" | sudo tee -a /etc/modprobe.d/audio_di
 ## Hibernacija ne radi
 Pogledati dokument `1-arch_instalacija.md`, odeljak **"Uključivanje resume hook-a za hibernaciju sistema"**.
 
-## `sddm` na pogrešnom ekranu ili pogrešan format vremena i datuma 
-U nastavku postupak prebacivanja sddm-a na Wayland.  
-Ukoliko nije već urađeno:  
-- **System Settings** ➡️ **Colors & Themes** ➡️ **Login Screen (SDDM)** ➡️ **Apply Plasma Settings**
+## Problemi sa NTFS particijama
+**Ukoliko ne možete bootovati sistem zbog loše definisane NTFS particije, privremeno je zakomentarisatu u `/etc/fstab` fajlu (dodati `#` ispred linije).**
 
-Ovo će kreirati fajl `/etc/sddm.conf.d/kde_settings.conf`
-
-U tom fajlu, pod `[General]` izmeniti/dodati sledeće dve linije:
-```
-DisplayServer=wayland
-GreeterEnvironment=QT_WAYLAND_SHELL_INTEGRATION=layer-shell
+Najpre instalirati paket `ntfs-3g`.
+```sh
+sudo pacman -S --needed ntfs-3g
 ```
 
-Na kraju fajla dodati:
-
+Sada, ispraviti `fstab`, otkomentarisati liniju NTFS particije i zameniti `ntfs` drajver sa `ntfs-3d`.  
+Primer ispravnog `fstab` unosa za NTFS:
 ```
-[Wayland]
-CompositorCommand=kwin_wayland --drm --no-lockscreen --no-global-shortcuts --locale1
+UUID=xxxxxxxxxxxxxxxxx  /hdd0   ntfs-3g     rw,nosuid,nodev,noexec,uid=1000,gid=1001,umask=0007,allow_other,noatime,windows_names   0 0
 ```
 
-Sačuvati fajl i ponoviti:
-- **System Settings** ➡️ **Colors & Themes** ➡️ **Login Screen (SDDM)** ➡️ **Apply Plasma Settings**
-
-## Greška pri pokušaju mount-ovanja NTFS particije
+### Wrong fs type 
 Ukoliko se javi greška:
 ```
 wrong fs type, bad option, bad superblock on dev_file, missing codepage or helper program, or other error
@@ -40,8 +31,12 @@ wrong fs type, bad option, bad superblock on dev_file, missing codepage or helpe
 
 Uraditi sledeće:
 ```sh
-sudo pacman -S --needed ntfs-3g
 sudo ntfsfix -d dev_file_diska
+```
+
+## Ekran neće da se uključi nakon sleep mod-a na Nvidia grafičkoj karti
+```sh
+echo "options nvidia NVreg_PreserveVideoMemoryAllocations=1" | sudo tee -a /etc/modprobe.d/nvidia.conf
 ```
 
 ## Sistem ne prepoznaje zvučni uređaj koji podržava virtuelni Surround

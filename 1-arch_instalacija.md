@@ -46,6 +46,7 @@ Ukoliko je potrebno, napraviti novu tabelu particija (`g`). Ovo će obrisati ceo
 Nakon toga, za svaku particiju:
 - `n` - Nova particija
 - `t` - Tip particije
+
 Na kraju, izvršiti `w`.
 
 Potrebne su vam minimum 3 particije: uefi boot particija, swap particija i root particija. (*Pogledajte primer layout-a dole*)
@@ -56,7 +57,7 @@ Izmene se ne upisuju na disk pre nego što se izda `w` komanda.
 - `g` - Nova GPT tabela (reset tabele particija)
     > ⚠️ **Kreiranje nove GPT tabele briše sve podatke na odabranom disku!**
 - `n` - Nova particija
-    - Uvek odabrati ponuđen početni sektor particije (samo `ENTER`)
+    - Uvek odabrati ponuđeni početni sektor particije (samo `ENTER`)
     - Krajnji sektor particije (veličina particije) se može zadati sa `+1G`, `+500M`, itd.
 - `t` - Definisanje tipa particije
     - `uefi` - EFI particija
@@ -225,7 +226,7 @@ title   Arch Linux
 linux   /vmlinuz-linux
 initrd  /amd-ucode.img
 initrd  /initramfs-linux.img
-options root=UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx rw lsm=landlock,lockdown,yama,integrity,apparmor,bpf 
+options root=UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx rw
 ```
 **Intel:**
 ```
@@ -233,14 +234,12 @@ title   Arch Linux
 linux   /vmlinuz-linux
 initrd  /intel-ucode.img
 initrd  /initramfs-linux.img
-options root=UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx rw lsm=landlock,lockdown,yama,integrity,apparmor,bpf
+options root=UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx rw
 ```
-> ℹ️ `lsm` opcija je potrebna za `apparmor` servis, koji je potreban za `snapd` package manager
 
-Sačuvati fajl i uključiti auto-update i apparmor servise:
+Sačuvati fajl i uključiti auto-update servis:
 ```sh
 systemctl enable systemd-boot-update
-systemctl enable apparmor
 ```
 
 ## Unmount i prvi boot sistema

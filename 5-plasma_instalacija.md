@@ -12,7 +12,8 @@
 - `kscreen` - Konfigurator displeja
 - `kinfocenter` - Prikaz informacija o sistemu
 - `ksystemlog` - Event log
-- `kwalletmanager` - Konfigurator "KWallet" password managera - potrebno iako se ne koristi jer se neki moduli (npr. WiFi) bune ako ga nema
+- `kwalletmanager` - Konfigurator "KWallet-a" (pogledati odeljak "KWallet" dole)
+- `kwallet-pam` - Automatsko otvaranje wallet-a
 - `sddm` - Menadžer sesija
 - `sddm-kcm` - Konfigurator sddm-a
 - `xdg-desktop-portal-kde` - Potrebno za razne desktop funkcionalnosti (file picker, drag-and-drop, itd.)
@@ -33,27 +34,55 @@
 sudo pacman -S plasma-desktop plasma-nm plasma-pa plasma-firewall plasma-systemmonitor kscreen kinfocenter ksystemlog kwalletmanager sddm sddm-kcm xdg-desktop-portal-kde bluedevil powerdevil power-profiles-daemon kde-gtk-config breeze-gtk cups print-manager konsole dolphin noto-fonts-cjk ttf-liberation ttf-droid
 ```
 
-## Reboot
+## Uključivanje sddm-a i reboot
 ```sh
+systemctl enable sddm
 reboot
 ```
 
 Pri sledećem boot-u pokrenuće se login screen u `sddm` session manager-u.  
 Nakon logovanja pokrenuće se Plasma okruženje.
 
-## Česta podešavanja
+## KWallet
+KWallet je "secret store" koji služi za kriptovanje tajnih podataka na sistemu (sačuvane WiFi šifre, šifre sačuvane u browseru, itd.). Nije neophodan ali se preporučuje.  
+Kada vam prvi put zatreba KWallet, automatski će se otvoriti dijalog za pravljenje novog wallet-a.  
+
+- Za tip odabrati "blowfish file"
+- Kao lozinku **obavezno staviti istu loziku koju koristite za linux user login**! Ukoliko to ne uradite, wallet se neće moći automatski otvarati.
+
+> ⚠️ KWallet nije zamena za password manager! On služi samo da automatski čuva sistemske tajne. 
+
+## Prebacivanje `sddm-a` na Wayland
+Ovaj korak je opcion, ali pomaže ako se lock screen nalazi na porešnom ekranu ili ima pogrešan format datuma.
+
+- **System Settings** ➡️ **Colors & Themes** ➡️ **Login Screen (SDDM)** ➡️ **Apply Plasma Settings**
+
+Ovo će kreirati fajl `/etc/sddm.conf.d/kde_settings.conf`
+
+U tom fajlu, pod `[General]` izmeniti/dodati sledeće dve linije:
+```
+DisplayServer=wayland
+GreeterEnvironment=QT_WAYLAND_SHELL_INTEGRATION=layer-shell
+```
+
+Na kraju fajla dodati:
+
+```
+[Wayland]
+CompositorCommand=kwin_wayland --drm --no-lockscreen --no-global-shortcuts --locale1
+```
+
+Sačuvati fajl i ponoviti:
+- **System Settings** ➡️ **Colors & Themes** ➡️ **Login Screen (SDDM)** ➡️ **Apply Plasma Settings**
+
+
+## Ostala česta podešavanja
 ***Budući da Plasma pruža grafički interfejs, većina podešavanja su samoobjašnjavajuća - ovde ću navesti neka najčešća koja se mogu potencijalno obaviti nakon prve instalacije sistema.*** 
 
 > ℹ️ **Nijedno podešavanje nije obavezno.**
 
 ### Isključivanje ubrzanja miša
 - System Settings ➡️ Mouse & Touchpad ➡️ Enable pointer acceleration - OFF
-
-### Isključivanje akcije na gornjem levom ćošku ekrana
-- System Settings ➡️ Mouse & Touchpad ➡️ Screen Edges ➡️ (Gornji levi kvadratić) ➡️ No Action
-
-### Maksimizacija prozora pri pomeranju na gornju ivicu ekrana
-- System Settings ➡️ Mouse & Touchpad ➡️ Screen Edges ➡️ Maximize: Windows dragged to top edge - ON
 
 ### Automtasko uključivanje NumLock-a pri pokretanju sistema
 - System Settings ➡️ Keyboard ➡️ Keyboard ➡️ NumLock on startup ➡️ Turn on
@@ -67,11 +96,17 @@ Nakon logovanja pokrenuće se Plasma okruženje.
 - System Settings ➡️ Keyboard ➡️ Shortcuts ➡️ Keyboard Layout Switcher ➡️ Switch to Next Keyboard Layout ➡️ Add... ➡️ (ALT+SHIFT)
 
 ### Podešavanje ekrana
-- System Settings ➡️ Display & Monitor
+- System Settings ➡️ Display & Monitor ➡️ Display Configuration 
     - Podesiti odgovarajući refresh rate
     - Podesiti pozicije i primarni ekran u slučaju korišćenja više od jednog ekrana
     - Podesiti HDR
     > ⚠️ Pažnja pri uključivanju HDR-a na NVIDIA grafičkim kartama!
+
+### Isključivanje akcije na gornjem levom ćošku ekrana
+- System Settings ➡️ Display & Monitor ➡️ Screen Edges ➡️ (Gornji levi kvadratić) ➡️ No Action
+
+### Maksimizacija prozora pri pomeranju na gornju ivicu ekrana
+- System Settings ➡️ Display & Monitor ➡️ Screen Edges ➡️ Maximize: Windows dragged to top edge - ON
 
 ### Isključivanje povećanja kursora pri brzom pomeranju
 - System Settings ➡️ Accessibility ➡️ Shake Cursor ➡️ Enable - OFF

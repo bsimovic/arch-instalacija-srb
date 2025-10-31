@@ -1,4 +1,4 @@
-# 5.B Dodatan softver
+# 5.B Dodatan softver za Plasma okruženje
 ***Softver opšte ili specifične namene koji možda želite a možda i ne.***
 
 ## Opšti alat za Plasmu
@@ -6,7 +6,6 @@
 - `ark` - Menadžer arhiva
 - `kclock` - Tajmer, štoperica, itd.
 - `gwenview` - Pregledač slika
-- `okular` - Pregledač PDF-ova
 - `kamoso` - Kamera
 - `spectacle` - Screenshot alat (Po uzoru na "Snipping Tool" iz Windowsa)
 - `kate` - GUI tekst editor
@@ -27,7 +26,7 @@ Odabrati i instalirati željeni web pregledač, navešću najpopularnije:
 - `vivaldi`
 - `brave` (AUR)
 
-> ℹ️ **Za uputstvo za instalaciju AUR paketa pogledati `3-upravljanje_paketima.md`, odeljak *"Arch user repository (AUR)"***
+> ℹ️ **Za uputstvo za instalaciju AUR paketa pogledati dodatak `B-dodatni_izvori_softvera.md`, odeljak *"Arch user repository (AUR)"***
 
 ## Microsoft fontovi
 ***Standardni microsoft fontovi (Arial, Times New Roman, Comic Sans, itd.)***  
@@ -36,15 +35,6 @@ Odabrati i instalirati željeni web pregledač, navešću najpopularnije:
 Nalazi se na AUR-u:
 - **Naziv paketa**: `ttf-ms-fonts`
 - **Git clone url:** https://aur.archlinux.org/ttf-ms-fonts.git
-
-## Screen share
-***Ukoliko želite da "delite ekran" preko Discord-a, Zoom-a, itd. neophodan je `xwaylandvideobridge` AUR paket.***
-
-- **Naziv paketa**: `xwaylandvideobridge`
-- **Git clone url:** https://aur.archlinux.org/xwaylandvideobridge.git
-
-> ⚠️ "Streamovanje" video igara na Discordu daje varirajuće performanse - **uglavnom je neupotrebljivo**!  
-> ⚠️ Trenutno nažalost ne postoji rešenje/alternativa za ovaj problem.
 
 ## Media player
 Postoji gomila - navešću dva:
@@ -104,21 +94,14 @@ Autostart:
 - System Settings ➡️ Autostart ➡️ Add New ➡️ Application... ➡️ System ➡️ Yakuake
 
 ## Discord
-**Preporučujem korišćenje flathub paketa**, zbog toga što je on jedini zvanično verifikovan i održavan od strane Discord developera.  
-> ℹ️ **Za uputstvo za instalaciju `flathub` paketa pogledati `5A-dodatni_izvori_softvera.md`**
-
-> ⚠️ Zbog flatpak sandbox-a, "rich presense" funkcionalnost (prikaz trenutno pokrenute igre) neće raditi.  
-> ⚠️ Ako vam je to neophodno, instalirajte `discord` paket preko pacman-a. 
-
 ```sh
-flatpak install com.discordapp.Discord
+sudo pacman -S Discord
 ```
 
 ## Ostalo
 ***Ostale aplikacije koje ja koristim***
 
 - Telegram: `org.telegram.desktop` (flathub)
-- Viber: `com.viber.Viber` (flathub)
 - Spotify: `spotify-launcher`
 - KeePassXC: `org.keepassxc.KeePassXC` (flathub) 
 - Visual Studio Code: `visual-studio-code-bin` (AUR)
