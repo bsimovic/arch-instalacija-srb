@@ -31,7 +31,7 @@
 - `ttf-droid` - Droid fontovi
 
 ```sh
-sudo pacman -S plasma-desktop plasma-nm plasma-pa plasma-firewall plasma-systemmonitor kscreen kinfocenter ksystemlog kwalletmanager sddm sddm-kcm xdg-desktop-portal-kde bluedevil powerdevil power-profiles-daemon kde-gtk-config breeze-gtk cups print-manager konsole dolphin noto-fonts-cjk ttf-liberation ttf-droid
+sudo pacman -S plasma-desktop plasma-nm plasma-pa plasma-firewall plasma-systemmonitor kscreen kinfocenter ksystemlog kwalletmanager kwallet-pam sddm sddm-kcm xdg-desktop-portal-kde bluedevil powerdevil power-profiles-daemon kde-gtk-config breeze-gtk cups print-manager konsole dolphin noto-fonts-cjk ttf-liberation ttf-droid
 ```
 
 ## Uključivanje sddm-a i reboot
