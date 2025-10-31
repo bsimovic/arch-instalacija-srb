@@ -12,7 +12,7 @@ Pogledati dokument `1-arch_instalacija.md`, odeljak **"Uključivanje resume hook
 ## Problemi sa NTFS particijama
 **Ukoliko ne možete bootovati sistem zbog loše definisane NTFS particije, privremeno je zakomentarisatu u `/etc/fstab` fajlu (dodati `#` ispred linije).**
 
-Najpre instalirati paket `ntfs-3g`.
+Najpre instalirati paket `ntfs-3g`:
 ```sh
 sudo pacman -S --needed ntfs-3g
 ```
@@ -20,7 +20,7 @@ sudo pacman -S --needed ntfs-3g
 Sada, ispraviti `fstab`, otkomentarisati liniju NTFS particije i zameniti `ntfs` drajver sa `ntfs-3d`.  
 Primer ispravnog `fstab` unosa za NTFS:
 ```
-UUID=xxxxxxxxxxxxxxxxx  /hdd0   ntfs-3g     rw,nosuid,nodev,noexec,uid=1000,gid=1001,umask=0007,allow_other,noatime,windows_names   0 0
+UUID=xxxxxxxxxxxxxxxxx  /hdd0   ntfs-3g     rw,nosuid,nodev,noexec,uid=0,gid=0,umask=0000,allow_other,noatime,windows_names   0 0
 ```
 
 ### Wrong fs type 

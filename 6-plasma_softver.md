@@ -1,7 +1,7 @@
 # 5.B Dodatan softver za Plasma okruženje
 ***Softver opšte ili specifične namene koji možda želite a možda i ne.***
 
-## Opšti alat za Plasmu
+## Opšti alat
 ***Opcioni dodatani alat čiji ekvivalenti dolaze uz Windows***
 - `ark` - Menadžer arhiva
 - `kclock` - Tajmer, štoperica, itd.
@@ -15,7 +15,7 @@
 - `kweather` - Vremenska prognoza
 
 ```sh
-sudo pacman -S ark kclock gwenview okular kamoso spectacle kate qalculate-gtk kolourpaint gparted kweather
+sudo pacman -S ark kclock gwenview kamoso spectacle kate qalculate-gtk kolourpaint gparted kweather
 ```
 
 ## Web pregledač
@@ -80,31 +80,3 @@ alias egrep='egrep --color=auto'
 ```
 
 ![Prompt](./assets/zsh_prompt.png)
-
-## Dropdown terminal (`yakuake`)
-***Veoma korisno ako često koristite terminal.***
-```sh
-sudo pacman -S yakuake
-```
-Keyboard shortcut:
-- System Settings ➡️ Keyboard ➡️ Shortcuts ➡️ Yakuake ➡️ Add...
-    - Ja koristim `WIN+q`
-
-Autostart:
-- System Settings ➡️ Autostart ➡️ Add New ➡️ Application... ➡️ System ➡️ Yakuake
-
-## Discord
-```sh
-sudo pacman -S Discord
-```
-
-## Ostalo
-***Ostale aplikacije koje ja koristim***
-
-- Telegram: `org.telegram.desktop` (flathub)
-- Spotify: `spotify-launcher`
-- KeePassXC: `org.keepassxc.KeePassXC` (flathub) 
-- Visual Studio Code: `visual-studio-code-bin` (AUR)
-- btop: `btop` 
-- Steam, Lutris, RetroArch, itd.
-    - Videti dokument `7-gejming.md`
