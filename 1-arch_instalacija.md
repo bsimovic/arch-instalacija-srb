@@ -40,6 +40,16 @@ Odabrati **disk** na kojem ćete instalirati sistem:
 fdisk dev_file_diska
 ```
 
+#### Kreiranje particija
+*Pogledati spisak komandi ispod.*  
+Ukoliko je potrebno, napraviti novu tabelu particija (`g`). Ovo će obrisati ceo disk i napraviti novu tabelu.  
+Nakon toga, za svaku particiju:
+- `n` - Nova particija
+- `t` - Tip particije
+Na kraju, izvršiti `w`.
+
+Potrebne su vam minimum 3 particije: uefi boot particija, swap particija i root particija. (*Pogledajte primer layout-a dole*)
+
 #### Komande
 Izmene se ne upisuju na disk pre nego što se izda `w` komanda.
 - `p` - Listanje particija
@@ -54,7 +64,7 @@ Izmene se ne upisuju na disk pre nego što se izda `w` komanda.
     - `linux` - Linux filesystem particija (default)
 - `w` - Upisivanje izmena na disk i izlaz iz `fdisk`
 
-#### Opšti layout
+#### Primer layout-a particija
 - **1GB** - `uefi`
 - **Veličina RAM-a** - `swap`
 - **Proizvoljna veličina** - `linux` (ovo će biti root particija)
@@ -118,7 +128,7 @@ nano /mnt/etc/fstab
 ```
 
 Očitati generisan fajl u svrhu provere da li je sve u redu i izmeniti `fmask` i `dmask` za EFI particiju na `0077`.  
-> ⚠️ **EFI particija nije nužno prva na listi!**
+>⚠️ **EFI particija nije nužno prva na listi!**
 
 > ℹ️ **Upotreba `nano`-a:**
 > - `CTRL+o` - **save**
@@ -215,7 +225,7 @@ title   Arch Linux
 linux   /vmlinuz-linux
 initrd  /amd-ucode.img
 initrd  /initramfs-linux.img
-options root=UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx rw
+options root=UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx rw lsm=landlock,lockdown,yama,integrity,apparmor,bpf 
 ```
 **Intel:**
 ```
@@ -223,12 +233,14 @@ title   Arch Linux
 linux   /vmlinuz-linux
 initrd  /intel-ucode.img
 initrd  /initramfs-linux.img
-options root=UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx rw
+options root=UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx rw lsm=landlock,lockdown,yama,integrity,apparmor,bpf
 ```
+> ℹ️ `lsm` opcija je potrebna za `apparmor` servis, koji je potreban za `snapd` package manager
 
-Sačuvati fajl i uključiti auto-update servis:
+Sačuvati fajl i uključiti auto-update i apparmor servise:
 ```sh
 systemctl enable systemd-boot-update
+systemctl enable apparmor
 ```
 
 ## Unmount i prvi boot sistema
