@@ -135,7 +135,6 @@ Očitati generisan fajl u svrhu provere da li je sve u redu i izmeniti `fmask` i
 > - `CTRL+o` - **save**
 > - `CTRL+x` - **exit**
 > - `CTRL+f` - **find**
-> - `CTRL+g` - **help**
 
 ### chroot u instaliran sistem
 ```sh
@@ -160,7 +159,10 @@ nano /etc/locale.gen
 #   sr_RS UTF-8
 #   sr_RS@latin UTF-8
 #   ...ostali lokali po želji
-
+#
+#   Sacuvati fajl!!!
+```
+```
 locale-gen
 echo "LANG=en_US.UTF-8" >> /etc/locale.conf
 echo "LC_TIME=en_GB.UTF-8" >> /etc/locale.conf
@@ -245,7 +247,7 @@ systemctl enable systemd-boot-update
 ## Unmount i prvi boot sistema
 ```sh
 exit
-umount -R /mnt
+umount -R /mnt # paznja! nije unmount nego umount!
 reboot
 ```
 

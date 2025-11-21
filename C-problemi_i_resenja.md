@@ -9,6 +9,12 @@ echo "options snd_hda_intel power_save=0" | sudo tee -a /etc/modprobe.d/audio_di
 ## Hibernacija ne radi
 Pogledati dokument `1-arch_instalacija.md`, odeljak **"Uključivanje resume hook-a za hibernaciju sistema"**.
 
+## Bluetooth ne radi
+```sh
+sudo pacman -S --needed bluedevil
+sudo systemctl enable --now bluetooth
+```
+
 ## Problemi sa NTFS particijama
 **Ukoliko ne možete bootovati sistem zbog loše definisane NTFS particije, privremeno je zakomentarisatu u `/etc/fstab` fajlu (dodati `#` ispred linije).**
 
@@ -33,6 +39,9 @@ Uraditi sledeće:
 ```sh
 sudo ntfsfix -d dev_file_diska
 ```
+
+## Lock screen prikazuje pogresan format datuma
+Pogledati dokument `5-plasma_instalacija.md`, odeljak **"Prebacivanje sddm-a na Wayland"**.
 
 ## Ekran neće da se uključi nakon sleep mod-a na Nvidia grafičkoj karti
 ```sh

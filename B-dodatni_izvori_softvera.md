@@ -4,10 +4,6 @@
 ## Arch user repository (AUR)
 Sadrži neoficijalne pakete dodate od strane korisnika.  
 
-> ⚠️ **Oprezno pri instalaciji paketa sa AUR-a!**  
-> ⚠️ **Dešavalo se da sadrže malware:**  
->  https://www.bleepingcomputer.com/news/security/arch-linux-pulls-aur-packages-that-installed-chaos-rat-malware/
-
 > ℹ️ **Korišćenje "pomagača za AUR", npr. `yay`, se ne preporučuje od strane Arch Linux developera. Tako da ću ovde objasniti ručni proces instalacije paketa sa AUR-a.**
 
 ### Konfiguracija
@@ -91,38 +87,4 @@ flatpak list --app
 #### Brisanje paketa:
 ```sh
 flatpak uninstall naziv_paketa
-```
-
-## Direktno preuzimanje softvera ("Windows način")
-> ⚠️ Direktno preuzimanje softvera sa oficijalnog sajta je alternativa za AUR, preporučljivo je samo ***ako nema traženog softvera u Arch repozitorijumima ili na flathub-u***.  
-> ⚠️ Kao i kod Windows-a, preuzimajte softver samo ako ste sigurni da je izvor siguran!
-
-Postoji nekoliko mogućnosti direktne distribucije:
-- Pre-kompajlovana izvršna datoteka (često upakovana sa dodatnim fajlovima u `.tar.gz` arhivi)
-- `.appimage` paket
-- `.deb` ili `.rpm` paket (**Tražiti alternativu**)
-
-### Pre-kompajlovane izvršne datoteke
-
-Ekstraktovati arhivu u proizvoljni folder u `~` (home) direktorijumu :
-```sh
-tar -xvzf naziv_fajla.tar.gz -C ~/naziv_foldera
-cd ~/naziv_foldera
-```
-
-Naći izvršni fajl, dodati mu execute permisiju i napraviti simboličku vezu u `/usr/local/bin`:
-```sh
-sudo chmod +x izvrsni_fajl
-sudo ln -sf izvrsni_fajl /usr/local/bin/izvrsni_fajl
-```
-
-### `.appimage` paketi
-
-Ekvivalentno portable `.exe` fajlu na windows-u.
-
-Dodati execute permisiju i napraviti simboličku vezu u `/usr/local/bin`:
-```sh
-# U folderu sa paketom
-sudo chmod +x naziv_fajla.appimage
-sudo ln -sf naziv_fajla.appimage /usr/local/bin/naziv_fajla
 ```
