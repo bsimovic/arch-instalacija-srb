@@ -1,4 +1,5 @@
 # 2. Secure boot konfiguracija
+
 > [!INFO]
 > Preskočiti ceo ovaj dokument ako secure boot nije potreban.
 
