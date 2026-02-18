@@ -37,15 +37,7 @@ wrong fs type, bad option, bad superblock on dev_file, missing codepage or helpe
 
 Uraditi sledeće:
 ```sh
-sudo ntfsfix -d dev_file_diska
-```
-
-## Lock screen prikazuje pogresan format datuma
-Pogledati dokument `5-plasma_instalacija.md`, odeljak **"Prebacivanje sddm-a na Wayland"**.
-
-## Ekran neće da se uključi nakon sleep mod-a na Nvidia grafičkoj karti
-```sh
-echo "options nvidia NVreg_PreserveVideoMemoryAllocations=1" | sudo tee -a /etc/modprobe.d/nvidia.conf
+sudo ntfsfix -d [dev file diska]
 ```
 
 ## Sistem ne prepoznaje zvučni uređaj koji podržava virtuelni Surround
@@ -73,9 +65,7 @@ Preuzeti odgovarajući HeSuVi `.wav` fajl sa https://airtable.com/appayGNkn3nSuX
 Npr. ako imate Razer slušalice, kliknite na "*Download WAV*" u "*razer*" redu.
 Sačuvajte ga na lokaciji: `~/.config/pipewire` sa imenom `hesuvi.wav`.
 
-Unutar `~/.config/pipewire/pipewire.conf` uradite find and replace (CTRL+h) - zameniti string `hrir_hesuvi/hrir.wav` sa ***apsolutnom putanjom do `hesuvi.wav` fajla***, dakle: `/home/VAŠ_USERNAME/.config/pipewire/hesuvi.wav`.
+Unutar `~/.config/pipewire/pipewire.conf` uradite find and replace (CTRL+h) - zameniti string `hrir_hesuvi/hrir.wav` sa ***apsolutnom putanjom do `hesuvi.wav` fajla***, dakle: `/home/[USERNAME]/.config/pipewire/hesuvi.wav`.
 
 Restartovati računar, i pri sledećem boot-u promeniti sound output device na **Virtual Surround Sink**.
-## Crn ekran nakon uključivanja HDR-a
 
-***WIP***

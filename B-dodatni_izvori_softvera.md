@@ -4,7 +4,8 @@
 ## Arch user repository (AUR)
 Sadrži neoficijalne pakete dodate od strane korisnika.  
 
-> ℹ️ **Korišćenje "pomagača za AUR", npr. `yay`, se ne preporučuje od strane Arch Linux developera. Tako da ću ovde objasniti ručni proces instalacije paketa sa AUR-a.**
+> [!INFO]
+> Korišćenje "pomagača za AUR", npr. `yay`, se ne preporučuje od strane Arch Linux developera. Tako da ću ovde objasniti ručni proces instalacije paketa sa AUR-a.
 
 ### Konfiguracija
 #### Alat
@@ -30,17 +31,17 @@ Sa stranice paketa, kopirati ***Git Clone URL***, biće potreban pri instalaciji
 # Preći u prethodno kreiran .aur folder
 cd ~/.aur
 # Preuzeti specifikaciju paketa
-git clone git_clone_url
+git clone [git clone URL]
 # Buildovanje i instalacija
-makepkg -si -D naziv_paketa
+makepkg -si -D [naziv paketa]
 ```
-
-> ⚠️ **Ne brisati specifikaciju paketa, potrebna je za ažuriranje!**  
+> [!WARNING]
+> Ne brisati specifikaciju paketa, potrebna je za ažuriranje!
 
 ### Ažuriranje paketa
 ```sh
 # Preći u folder sa specifikacijom paketa
-cd ~/.aur/naziv_paketa
+cd ~/.aur/[naziv paketa]
 # Ažurirati specifikaciju
 git pull
 # Buildovanje i instalacija
@@ -49,7 +50,7 @@ makepkg -si
 
 ### Deinstalacija paketa
 ```sh
-sudo pacman -R naziv_paketa
+sudo pacman -R [naziv paketa]
 ```
 
 ## Flathub
@@ -57,9 +58,11 @@ Package manager koji pruža pristup flathub-u se zove `flatpak`.
 Flathub ima široku upotrebu i mnogi poznat softver se može naći na njemu.  
 Softver možete pretraživati na sajtu: https://flathub.org
 
-> ℹ️ **Oficijalne distribucije softvera imaju ✅ (Verified) oznaku na flathub sajtu.**
+> [!INFO]
+> Oficijalne distribucije softvera imaju ✅ (Verified) oznaku na flathub sajtu.
 
-> ⚠️ **Nikako ne menjati default repozitorijum!**  
+> [!WARNING]
+> **Nikako ne menjati default repozitorijum!**
 
 ### Instalacija flatpak-a:
 ```sh
@@ -69,10 +72,10 @@ sudo pacman -S flatpak
 ### Upotreba:
 #### Instalacija paketa:
 ```sh
-flatpak install naziv_paketa
+flatpak install [naziv paketa]
 ```
 Paketi se identifikuju punim kvalifikovanim nazivom, npr: `com.discordapp.Discord`.  
-`naziv_paketa` može biti i parcijalan (npr samo `discord`), u tom slučaju ćete dobiti rezultat pretrage i moći ćete da odaberete odgovarajući paket.
+Naziv paketa može biti i parcijalan (npr samo `discord`), u tom slučaju ćete dobiti rezultat pretrage i moći ćete da odaberete odgovarajući paket.
 
 #### Ažuriranje svih paketa:
 ```sh
@@ -86,5 +89,5 @@ flatpak list --app
 
 #### Brisanje paketa:
 ```sh
-flatpak uninstall naziv_paketa
+flatpak uninstall [naziv paketa]
 ```
