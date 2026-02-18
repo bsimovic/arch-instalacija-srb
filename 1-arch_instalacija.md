@@ -14,7 +14,7 @@ Preuzeti najnoviji Arch Linux ISO fajl sa: https://archlinux.org/download/
 Preuzeti i instalirati **Balena Etcher** sa: https://etcher.balena.io  
 Pokrenuti Balena Etcher i pratiti uputstva na ekranu za upisivanje ISO fajla na USB.
 
-### Na Linuxu:
+### Na Linuksu:
 ```sh
 sudo fdisk -l
 ```
