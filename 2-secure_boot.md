@@ -1,6 +1,6 @@
 # 2. Secure boot konfiguracija
 
-> [!INFO]
+> [!NOTE]
 > Preskočiti ceo ovaj dokument ako secure boot nije potreban.
 
 ## Bootovanje u setup mode

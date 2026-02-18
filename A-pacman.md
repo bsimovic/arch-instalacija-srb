@@ -1,7 +1,7 @@
 # `pacman` package manager
 `pacman` je podrazumevani package manager za Arch Linux, već je konfigurisan za pristup glavnim Arch repozitorijumima.
 ### Ažuriranje repozitorijuma i svih paketa
-> [!INFO]
+> [!NOTE]
 > Raditi ažuriranje s vremena na vreme
 
 ```sh

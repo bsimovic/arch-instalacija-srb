@@ -4,7 +4,7 @@
 ## Arch user repository (AUR)
 Sadrži neoficijalne pakete dodate od strane korisnika.  
 
-> [!INFO]
+> [!NOTE]
 > Korišćenje "pomagača za AUR", npr. `yay`, se ne preporučuje od strane Arch Linux developera. Tako da ću ovde objasniti ručni proces instalacije paketa sa AUR-a.
 
 ### Konfiguracija
@@ -58,7 +58,7 @@ Package manager koji pruža pristup flathub-u se zove `flatpak`.
 Flathub ima široku upotrebu i mnogi poznat softver se može naći na njemu.  
 Softver možete pretraživati na sajtu: https://flathub.org
 
-> [!INFO]
+> [!NOTE]
 > Oficijalne distribucije softvera imaju ✅ (Verified) oznaku na flathub sajtu.
 
 > [!WARNING]
