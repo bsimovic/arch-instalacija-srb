@@ -92,7 +92,7 @@ Ostale particije mogu, po želji, biti i na različitim diskovima
 - `n` - kreiranje nove particije
     - za indeks particije odabrati podrazumevani (samo `ENTER`)
     - za početni sektor uvek odabrati ponuđeni (samo `ENTER`)
-    - **krajnji sektor particije određuje veličinu particije i se može zadati sa `+1G`, `+500M`, itd.** Ako ne unesete vrednost za poslednji sektor (samo `ENTER`), kreiraće se particija veličine preostalog praznog prostora na disku.
+    - **krajnji sektor particije određuje veličinu particije i može se zadati sa `+1G`, `+500M`, itd.** Ako ne unesete vrednost za poslednji sektor (samo `ENTER`), kreiraće se particija veličine preostalog praznog prostora na disku.
 - `t` - definisanje tipa particije
     - biće ponuđen indeks poslednje kreirane particije (samo `ENTER`)
     - uneti naziv tipa u zavisnosti od uloge particije:
