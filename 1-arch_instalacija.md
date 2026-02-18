@@ -322,4 +322,4 @@ sudo pacman -Syu
 
 ## Sledeći koraci
 Sistem je instaliran i spreman za upotrebu.  
-Kao sledeći korak možete podesiti *secure boot* ukoliko je neophodno (`2-secure_boot.md`) ili odmah preći na instaliranje grafičkog drajvera (`3-graficki_drajver.md`) i grafičkog okruženja (`5-plasma_instalacija`).
+Kao sledeći korak možete podesiti *secure boot* ukoliko je neophodno (`2-secure_boot.md`) ili odmah preći na instaliranje grafičkog drajvera (`3-graficki_drajver.md`) i grafičkog okruženja (`4-plasma_instalacija`).

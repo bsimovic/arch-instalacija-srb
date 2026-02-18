@@ -1,5 +1,6 @@
 # 2. Secure boot konfiguracija
-**Preskočiti ceo ovaj dokument ako secure boot nije potreban.**
+> [!INFO]
+> Preskočiti ceo ovaj dokument ako secure boot nije potreban.
 
 ## Bootovanje u setup mode
 Restartovati računar i u UEFI konfiguraciji ("u BIOS-u") uključiti ***secure boot setup mode***.  

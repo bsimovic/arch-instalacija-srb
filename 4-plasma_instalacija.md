@@ -1,6 +1,6 @@
 # 5.  Instalacija i konfiguracija Plasma desktop okruženja
 > [!INFO]
-> **Ukoliko želite neko drugo desktop okruženje (ili ne želite nijedno), možete preskočiti ovaj dokument.**
+> Ukoliko želite neko drugo desktop okruženje (ili ne želite nijedno), možete preskočiti ovaj dokument.
 
 ## Paketi
 ### Osnovni paketi
