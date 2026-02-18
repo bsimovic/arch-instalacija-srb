@@ -32,7 +32,7 @@ sudo pacman -S nvidia-settings vulkan-icd-loader lib32-vulkan-icd-loader
 ```
 
 ### Serije starije od GTX 7xx
-Pogledati wiki: (https://wiki.archlinux.org/title/NVIDIA).
+Pogledati wiki: https://wiki.archlinux.org/title/NVIDIA.
 
 ## AMD
 Paketi:
@@ -49,7 +49,7 @@ sudo pacman -S mesa lib32-mesa vulkan-radeon lib32-vulkan-radeon vulkan-icd-load
 ```
 
 ### Veoma stare AMD grafičke karte
-Pogledati wiki: (https://wiki.archlinux.org/title/AMDGPU).
+Pogledati wiki: https://wiki.archlinux.org/title/AMDGPU.
 
 ## Intel
 Paketi:
@@ -65,5 +65,5 @@ sudo pacman -S mesa lib32-mesa vulkan-intel lib32-vulkan-intel vulkan-icd-loader
 ```
 
 ### Veoma stare Intel grafičke karte
-Pogledati wiki: (https://wiki.archlinux.org/title/Intel_graphics).
+Pogledati wiki: https://wiki.archlinux.org/title/Intel_graphics.
 
