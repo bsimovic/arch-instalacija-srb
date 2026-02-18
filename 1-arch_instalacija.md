@@ -9,7 +9,7 @@ Najpre ubaciti USB drive u računar.
 ## Preuzimanje Arch Linuxa
 Preuzeti najnoviji Arch Linux ISO fajl sa: https://archlinux.org/download/
 
-## Kreiranje instalacionog uređaja
+## Kreiranje instalacionog uređaja i live boot
 ### Na Windowsu:
 Preuzeti i instalirati **Balena Etcher** sa: https://etcher.balena.io  
 Pokrenuti Balena Etcher i pratiti uputstva na ekranu za upisivanje ISO fajla na USB.
@@ -31,8 +31,8 @@ cat [putanja do ISO fajla] > [dev file USB uređaja]
 ```
 Sačekati da se izvrši upis.
 
-## Boot sa USB-a
-Ubaciti USB u računar na kome želite instalirati Arch Linux.  
+### Boot sa USB-a
+Ubaciti USB u računar na kojem želite instalirati Arch Linux.  
 Startovati (ili restartovati) taj računar. Pri pokretanju računara otvoriti meni za odabir boot uređaja.  
 
 > [!TIP]
