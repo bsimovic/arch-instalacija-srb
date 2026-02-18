@@ -128,7 +128,7 @@ Ostale `linux` particije (ako postoje) montirati na odgovarajuće lokacije unuta
 ```sh
 mount [dev file home particije] /mnt/home
 ```
-Storage particije montirati u novim proizvoljnim folderima unutar `/mnt`, npr `/mnt/data` ili `/mnt/hdd1`.
+Postojeće storage particije (ako postoje) montirati u novim proizvoljnim folderima unutar `/mnt`, npr `/mnt/data` ili `/mnt/hdd1`.
 
 ## Instalacija sistema i alata
 ### Paketi
@@ -246,7 +246,7 @@ EDITOR=nano visudo
 Ukloniti `#` sa linije `%wheel ALL=(ALL) ALL` i sačuvati fajl.
 
 ## Podešavanje `systemd-boot` bootloader-a
-> > [!TIP]
+> [!TIP]
 > Ja koristim `systemd-boot` jer već dolazi uz sistem i prilično je jednostavan za razumevanje (ne baš i za konfiguraciju).  
 > Ukoliko planirate da koristite drugi bootloader (npr. GRUB), preskočite ovu sekciju i potražite uputstvo na internetu.
 
