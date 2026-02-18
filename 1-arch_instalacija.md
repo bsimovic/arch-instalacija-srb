@@ -7,11 +7,11 @@ Za kreiranje instalacionog USB-a, potreban vam je prazan USB drive i računar ko
 Najpre ubaciti USB drive u računar.
 
 ## Preuzimanje Arch Linuxa
-Preuzeti najnoviji Arch Linux ISO fajl sa: https://archlinux.org/download/.
+Preuzeti najnoviji Arch Linux ISO fajl sa: https://archlinux.org/download/
 
 ## Kreiranje instalacionog uređaja
 ### Na Windowsu:
-Preuzeti i instalirati **Balena Etcher** sa: https://etcher.balena.io.  
+Preuzeti i instalirati **Balena Etcher** sa: https://etcher.balena.io  
 Pokrenuti Balena Etcher i pratiti uputstva na ekranu za upisivanje ISO fajla na USB.
 
 ### Na Linuxu:
