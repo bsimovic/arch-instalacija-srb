@@ -1,6 +1,6 @@
 # 5.  Instalacija i konfiguracija Plasma desktop okruženja
 
-> [!INFO]
+> [!NOTE]
 > Ukoliko želite neko drugo desktop okruženje (ili ne želite nijedno), možete preskočiti ovaj dokument.
 
 ## Paketi
@@ -112,7 +112,7 @@ Dve opcije su:
     - Ume biti malo nezgrapan za upotrebu, pogotovo ako ste navikli na moderan MS Office (UI LibreOffice-a podseća na MS Office 2003)
 - Korisćenje nekih od web aplikacija (Microsoft 365, Google Docs, etc...)
 
-> [!INFO]
+> [!NOTE]
 > Moderne verzije MS Office-a su previše duboko integrisane sa raznim komponentama Windows-a - **neće raditi na Linuksu preko `wine`-a.**  
 
 ## Reboot
