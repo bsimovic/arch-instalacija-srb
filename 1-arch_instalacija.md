@@ -31,11 +31,11 @@ fdisk [dev file diska]
 ```
 
 #### Komande
-`p` - listanje particija
-`g` - nova GPT tabela
-`n` - nova particija
-`t` - izmena tipa particije
-`w` - upis izmena na disk
+- `p` - listanje particija
+- `g` - nova GPT tabela
+- `n` - nova particija
+- `t` - izmena tipa particije
+- `w` - upis izmena na disk
 
 #### Preporučeni layout particija
 1. Veličina: **1GB** - tip: `uefi`
@@ -56,8 +56,8 @@ mkfs.ext4 [dev file root particije]
 mkfs.btrfs -L [proizvoljan naziv particije] [dev file root particije]
 ```
 
-> [!NOTE]dva
-> Za btrfs i specifične funkcionalnosti btrfs-a, pogledati `E-btrfs.md`.
+> [!NOTE]
+> Za btrfs i specifične funkcionalnosti btrfs-a (kompresija, snapshot), pogledati `E-btrfs.md`.
 > U suprotnom, koristiti *ext4*.
 
 Ostale `linux` particije formatirati sa `mkfs.ext4`.  
@@ -133,25 +133,23 @@ echo "LC_TIME=sr_RS.UTF-8" >> /etc/locale.conf
 nano /etc/mkinitcpio.conf
 ```
 
-Naći `HOOKS` property i dodati `resume` hook **između `block` i `filesystems`!**  
+Naći `HOOKS` property i dodati `resume` hook **između `block` i `filesystems`** i sačuvati fajl.  
 Npr. ovako:
 ```
 HOOKS=(base systemd autodetect microcode modconf kms keyboard keymap sd-vconsole block resume filesystems fsck)
 ```
 
-Sačuvati fajl.
-
 ```sh
 nano /etc/vconsole.conf
 ```
 
-Uneti:
+Uneti i sačuvati fajl:
 
 ```
 KEYMAP=us
 ```
 
-Sačuvati fajl i regenerisati initramfs:
+Regenerisati initramfs:
 ```sh
 mkinitcpio -P
 ```
@@ -162,12 +160,11 @@ mkinitcpio -P
 sudo nano /etc/pacman.conf
 ```
 
-Ukloniti `#` ispred linija:
+Ukloniti `#` ispred linija i sačuvati fajl:
 ```
 [multilib]
 Include = /etc/pacman.d/mirrorlist
 ```
-Sačuvati fajl.
 
 ### Definisanje hostname-a
 ```sh
@@ -211,7 +208,7 @@ blkid -s UUID -o value [dev file root particije] > /boot/loader/entries/arch.con
 # otvoriti fajl i izmeniti ga
 nano /boot/loader/entries/arch.conf
 ```
-Uneti sledeći sadržaj ***u zavisnosti od procesora*** i `x`-eve zameniti UUID-jem root particije:   
+Uneti sledeći sadržaj ***u zavisnosti od procesora*** i `x`-eve zameniti UUID-jem root particije, sačuvati fajl:   
 **AMD:**
 ```
 title   Arch Linux
@@ -220,8 +217,6 @@ initrd  /["amd" ili "intel"]-ucode.img
 initrd  /initramfs-linux.img
 options root=UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx rw
 ```
-
-Sačuvati fajl.
 
 ```sh
 systemctl enable systemd-boot-update

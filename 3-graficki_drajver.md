@@ -5,7 +5,6 @@ Ukoliko ista mašina ima dva grafička adaptera različitih proizvođača (uglav
 > [!TIP]
 > Za instalaciju paketa koristiti `pacman`.
 > Pogledati dodatak `A-izvori_softvera.md` odeljak *"pacman package manager"*.
-.
 
 ## NVIDIA
 ### Novije serije (GTX 16xx, RTX 20xx, 30xx, 40xx, 50xx...)

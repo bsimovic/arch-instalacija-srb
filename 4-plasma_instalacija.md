@@ -115,8 +115,7 @@ sudo systemctl enable --now bluetooth
 
 #### Discord
 - `discord`
-Ili
-- `com.discordapp.Discord` (flatpak)
+- ili `com.discordapp.Discord` (flatpak)
 
 #### Telegram
 - `org.telegram.desktop` (flatpak)
