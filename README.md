@@ -2,5 +2,5 @@
 
 ***Work in progress***
 
-Primarno napisano da samom sebi olakšam život...  
+OVO NIJE TUTORIJAL! Namenjeno je kao referenca iskusnim korisnicima da ne moraju da traze po internetu stvari koje su zaboravili svaki put kada moraju da instaliraju sistem.
 

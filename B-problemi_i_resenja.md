@@ -1,18 +1,10 @@
-# 6. Problemi i rešenja
+# B - Problemi i rešenja
 
 ***Rešenja za probleme na koje sam lično naišao pri upotrebi operativnog sistema.***
 
 ## Povremeno pucketanje iz zvučnika
 ```sh
 echo "options snd_hda_intel power_save=0" | sudo tee -a /etc/modprobe.d/audio_disable_powersave.conf
-```
-## Hibernacija ne radi
-Pogledati dokument `1-arch_instalacija.md`, odeljak **"Uključivanje resume hook-a za hibernaciju sistema"**.
-
-## Bluetooth ne radi
-```sh
-sudo pacman -S --needed bluedevil
-sudo systemctl enable --now bluetooth
 ```
 
 ## Problemi sa NTFS particijama
